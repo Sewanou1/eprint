@@ -124,13 +124,7 @@ export default {
 </script>
 
 
-<style scoped lang="scss">/**
-* Template Name: Bootslander - v4.7.1
-* Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
+<style scoped lang="scss">
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -1627,6 +1621,4 @@ section {
     margin: -20px 0 30px 0;
   }
 }
-
-
 </style>

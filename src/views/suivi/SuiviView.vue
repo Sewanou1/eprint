@@ -1,663 +1,54 @@
 <template>
-  <div class="hello">
-    <section id="hero">
-      <div class="container">
-        <div class="row justify-content-between">
-          <div
-            class="
-              col-lg-7
-              pt-5 pt-lg-0
-              order-2 order-lg-1
-              d-flex
-              align-items-center
-            "
-          >
-            <div data-aos="zoom-out" data-aos-duration="2000">
-              <h1>Commande ton impression sur <span>E-PRINT</span></h1>
-              <h2>
-                Une plateforme web qui va permettre à toute structure
-                d’impression de faire valoir ses services aux personnes qui sont
-                dans le besoin
-              </h2>
-              <div class="text-center text-lg-start">
-                <a href="" class="btn-get-started scrollto"
-                  >Commander maintenant</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-lg-4 order-1 order-lg-2 hero-img"
-            data-aos="zoom-out"
-            data-aos-delay="300"
-          >
-            <img
-              src="../assets/img/imprimer1.png"
-              class="img-fluid animated"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Hero -->
-
-    <main id="main">
-      <!-- ======= Details Section ======= -->
-      <section id="details" class="details">
-        <div class="container">
-          <div class="row content">
-            <div class="col-md-4" data-aos="fade-right"  data-aos-duration="2000">
-              <img src="../assets/img/client.png" class="img-fluid" alt="" />
-            </div>
-            <div class="col-md-8 pt-4" data-aos="fade-up"  data-aos-duration="2000">
-              <h3>Aimerez vous faire une impression ?.</h3>
-              <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <ul>
-                <li>
-                  <i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex
-                  ea commodo consequat.
-                </li>
-                <li>
-                  <i class="bi bi-check"></i> Duis aute irure dolor in
-                  reprehenderit in voluptate velit.
-                </li>
-                <li>
-                  <i class="bi bi-check"></i> Iure at voluptas aspernatur
-                  dignissimos doloribus repudiandae.
-                </li>
-                <li>
-                  <i class="bi bi-check"></i> Est ipsa assumenda id facilis
-                  nesciunt placeat sed doloribus praesentium.
-                </li>
-              </ul>
-              <p>
-                Voluptas nisi in quia excepturi nihil voluptas nam et ut.
-                Expedita omnis eum consequatur non. Sed in asperiores aut
-                repellendus. Error quisquam ab maiores. Quibusdam sit in officia
-              </p>
-            </div>
-
-            <div class="text-center mt-5 text">
-              <a
-                href="{{ route('commande.index') }}"
-                class="btn-get-started scrollto"
-                >Commander maintenant</a
-              >
-            </div>
-          </div>
-
-          <div class="row content">
-            <div class="col-md-4 order-1 order-md-2" data-aos="fade-left"  data-aos-duration="2000">
-              <img src="../assets/img/imprimeur.png" class="img-fluid" alt="" />
-            </div>
-            <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up"  data-aos-duration="2000">
-              <h3>Vous êtes un imprimeur ou un centre d'imprimerie ?</h3>
-              <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum
-              </p>
-              <p>
-                Inventore id enim dolor dicta qui et magni molestiae. Mollitia
-                optio officia illum ut cupiditate eos autem. Soluta dolorum
-                repellendus repellat amet autem rerum illum in. Quibusdam
-                occaecati est nisi esse. Saepe aut dignissimos distinctio id
-                enim.
-              </p>
-            </div>
-          </div>
-          <div class="text-center mt-5 text">
-            <a
-              href="{{ route('inscription') }}"
-              class="btn-get-started scrollto"
-              >Inscrivez-vous maintenant</a
-            >
-          </div>
-        </div>
-      </section>
-      <!-- End Details Section -->
-
-      <!-- ======= Debut service ======= -->
-      <section id="features" class="features">
-        <div class="container">
-          <div class="section-title" data-aos="fade-up">
-            <h2>SERVICES</h2>
-            <p>Nos services</p>
-          </div>
-
-          <div class="row" data-aos="fade-left">
-            <div class="col-lg-3 col-md-4">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="50"  data-aos-duration="1000" >
-                <i class="ri-store-line" style="color: #ffbb2c"></i>
-                <h3><a href=""> Impression de fichier pdf</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="100"  data-aos-duration="1000">
-                <i class="ri-bar-chart-box-line" style="color: #5578ff"></i>
-                <h3><a href="">Impression de bâche</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="150"  data-aos-duration="1500">
-                <i class="ri-calendar-todo-line" style="color: #e80368"></i>
-                <h3><a href="">Impression de carte de visite</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="200"  data-aos-duration="2000">
-                <i class="ri-paint-brush-line" style="color: #e361ff"></i>
-                <h3><a href="">Impression de carte de mariage</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="250"  data-aos-duration="3500">
-                <i class="ri-database-2-line" style="color: #47aeff"></i>
-                <h3><a href="">Impression de carte d'anniversaire</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="300"  data-aos-duration="3500">
-                <i class="ri-gradienter-line" style="color: #ffa76e"></i>
-                <h3><a href="">Impression de carte d'invitation</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="350"  data-aos-duration="3500">
-                <i class="ri-file-list-3-line" style="color: #11dbcf"></i>
-                <h3><a href="">Impression de Calendrier </a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="400"  data-aos-duration="4000">
-                <i class="ri-price-tag-2-line" style="color: #4233ff"></i>
-                <h3><a href="">Impression de flyers</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="450"  data-aos-duration="4500">
-                <i class="ri-anchor-line" style="color: #b2904f"></i>
-                <h3><a href=""> Autres… </a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="500"  data-aos-duration="5000">
-                <i class="ri-disc-line" style="color: #b20969"></i>
-                <h3><a href="">Moton Ideal</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="550"  data-aos-duration="5500">
-                <i class="ri-base-station-line" style="color: #ff5828"></i>
-                <h3><a href="">Verdo Park</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="600"  data-aos-duration="6000">
-                <i class="ri-fingerprint-line" style="color: #29cc61"></i>
-                <h3><a href="">Flavor Nivelanda</a></h3>
-              </div>
-            </div>
-          </div>
-
-          <div class="text-center mt-5">
-            <a href="#about" class="btn-get-started scrollto"
-              >Commander maintenant</a
-            >
-          </div>
-        </div>
-      </section>
-      <!-- End services -->
-
-      <!-- ======= Counts Section ======= -->
-      <section id="counts" class="counts">
-        <div class="container">
-          <div class="row" data-aos="fade-up">
-            <div class="col-lg-4 col-md-6">
-              <div class="count-box">
-                <i class="bi bi-emoji-smile"></i>
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="232"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p>Clients enregistrés</p>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
-              <div class="count-box">
-                <i class="bi bi-emoji-smile"></i>
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="521"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p>Imprimeurs disponible</p>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
-              <div class="count-box">
-                <i class="bi bi-headset"></i>
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="1463"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p>Equipe</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Counts Section -->
-
-      <!-- ======= Gallery Section ======= -->
-      <section id="gallery" class="gallery">
-        <div class="container" >
-          <div class="section-title" data-aos="fade-up">
-            <h2>Galerie</h2>
-            <p>Quelques impressions</p>
-          </div>
-
-          <div class="row g-0" data-aos="fade-left">
-            <div class="col-lg-3 col-md-4">
-              <div class="gallery-item" data-aos="zoom-in"  data-aos-duration="2000">
-                <a
-                  href="../assets/img/gallery/gallery-1.jpg"
-                  class="gallery-lightbox"
-                >
-                  <img
-                    src="../assets/img/gallery/gallery-1.jpg"
-                    alt=""
-                    class="img-fluid"
-                  />
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-              <div class="gallery-item" data-aos="zoom-in"  data-aos-duration="2000">
-                <a
-                  href="../assets/img/gallery/gallery-2.jpg"
-                  class="gallery-lightbox"
-                >
-                  <img
-                    src="../assets/img/gallery/gallery-2.jpg"
-                    alt=""
-                    class="img-fluid"
-                  />
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-              <div class="gallery-item" data-aos="zoom-in" data-aos-duration="2000">
-                <a
-                  href="../assets/img/gallery/gallery-3.jpg"
-                  class="gallery-lightbox"
-                >
-                  <img
-                    src="../assets/img/gallery/gallery-3.jpg"
-                    alt=""
-                    class="img-fluid"
-                  />
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-              <div class="gallery-item" data-aos="zoom-in" data-aos-duration="2500">
-                <a
-                  href="../assets/img/gallery/gallery-4.jpg"
-                  class="gallery-lightbox"
-                >
-                  <img
-                    src="../assets/img/gallery/gallery-4.jpg"
-                    alt=""
-                    class="img-fluid"
-                  />
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-              <div class="gallery-item" data-aos="zoom-in" data-aos-duration="2500">
-                <a
-                  href="../assets/img/gallery/gallery-5.jpg"
-                  class="gallery-lightbox"
-                >
-                  <img
-                    src="../assets/img/gallery/gallery-5.jpg"
-                    alt=""
-                    class="img-fluid"
-                  />
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-              <div class="gallery-item" data-aos="zoom-in" data-aos-duration="2500">
-                <a
-                  href="../assets/img/gallery/gallery-6.jpg"
-                  class="gallery-lightbox"
-                >
-                  <img
-                    src="../assets/img/gallery/gallery-6.jpg"
-                    alt=""
-                    class="img-fluid"
-                  />
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-              <div class="gallery-item" data-aos="zoom-in" data-aos-duration="2500">
-                <a
-                  href="../assets/img/gallery/gallery-7.jpg"
-                  class="gallery-lightbox"
-                >
-                  <img
-                    src="../assets/img/gallery/gallery-7.jpg"
-                    alt=""
-                    class="img-fluid"
-                  />
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-              <div class="gallery-item" data-aos="zoom-in" data-aos-duration="2500">
-                <a
-                  href="../assets/img/gallery/gallery-8.jpg"
-                  class="gallery-lightbox"
-                >
-                  <img
-                    src="../assets/img/gallery/gallery-8.jpg"
-                    alt=""
-                    class="img-fluid"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Gallery Section -->
-
-      <!-- ======= Avis des utilisateurs ======= -->
-      <section id="testimonials" class="testimonials">
-        <div class="container">
-          <div class="swiper-slide">
-            <div class="col-lg-12">
-              <div class="">
-                <h6 class="">E-PRINT Témoignages</h6>
-                <h1 class="section-title">
-                  Que disent les clients à <br />
-                  propos de <span>E-PRINT</span>?
-                </h1>
-              </div>
-            </div>
-          </div>
-          <div
-            id="carouselExampleFade"
-            class="carousel slide carousel-fade"
-            data-bs-ride="carousel"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
+    <div class="navbar">
+        <NavbarView />
+    </div>
+    <div class="hello">
+        <section style="font-family: 'Open Sans', 'sans-serif';"  class="mt-5">
+            <div class="container">
                 <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <img
-                      src="../assets/img/gallery/gallery-8.jpg"
-                      class="testimonial-img"
-                      alt=""
-                    />
-                    <h3>Saul Goodman</h3>
-                    <h4>Client 1</h4>
-                    <p>
-                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                      Proin iaculis purus consequat sem cure digni ssim donec
-                      porttitora entum suscipit rhoncus. Accusantium quam,
-                      ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                      risus at semper.
-                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                    </p>
-                  </div>
+                    <div class="col-lg-12 ">
+                        <div class="" >
+                            <h1 class="section-title "  style="color: rgba(1, 4, 136, 1); font-size:28px;font-weight: 700; margin-top:25px"><span >E-PRINT</span> suivi</h1>
+                                <h6 class=" " style="color: black" >Suivez vos commandes où que vous soyez.</h6>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="carousel-item">
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <img
-                      src="../assets/img/gallery/gallery-8.jpg"
-                      class="testimonial-img"
-                      alt=""
-                    />
-                    <h3>Sara Wilsson</h3>
-                    <h4>Client 2</h4>
-                    <p>
-                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                      Export tempor illum tamen malis malis eram quae irure esse
-                      labore quem cillum quid cillum eram malis quorum velit
-                      fore eram velit sunt aliqua noster fugiat irure amet legam
-                      anim culpa.
-                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                    </p>
-                  </div>
+
+                <div id="tracker-container" class="col-12 col-md-10">
+                    <form id="tracker-form" class="card card-sm" role="form" action="" method="POST">
+                        <div class="card-body row no-gutters align-items-center">
+                            <div class="col-auto">
+                                <i class="bi bi-search text-body"></i>
+                            </div>
+                            <div class="col">
+                                <input type="hidden" name="tracking_source" id="" value="" />
+                                <input placeholder="Saisissez le numéro de suivi" name="tracking_number" id="tracking-number" value="" type="search" autocomplete="off" maxlength="100" class="form-control form-control-lg form-control-borderless" style="border: none" />
+                            </div>
+                            <div class="col-auto">
+                                <button id="tracking-button" style="background-color:rgba(1, 4, 136, 1);height:50px;color:white;width:100px;border-radius:5px" type="submit" onclick="return trackParcel()">Suivre</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-              </div>
-              <div class="carousel-item">
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <img
-                      src="../assets/img/gallery/gallery-8.jpg"
-                      class="testimonial-img"
-                      alt=""
-                    />
-                    <h3>Jena Karlis</h3>
-                    <h4>Client 3</h4>
-                    <p>
-                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                      Enim nisi quem export duis labore cillum quae magna enim
-                      sint quorum nulla quem veniam duis minim tempor labore
-                      quem eram duis noster aute amet eram fore quis sint minim.
-                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleFade"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleFade"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-      </section>
-      <!-- End Testimonials Section -->
 
-      <!-- ======= F.A.Q Section ======= -->
-      <section id="faq" class="faq section-bg">
-        <div class="container">
-          <div class="section-title" data-aos="fade-up">
-            <h2>F.A.Q</h2>
-            <p>Questions frequentes</p>
-          </div>
-
-          <div class="faq-list">
-            <ul>
-              <li data-aos="fade-up">
-                <i class="bx bx-help-circle icon-help"></i>
-                <a
-                  data-bs-toggle="collapse"
-                  class="collapse"
-                  data-bs-target="#faq-list-1"
-                  >Non consectetur a erat nam at lectus urna duis?
-                  <i class="bx bx-chevron-down icon-show"></i
-                  ><i class="bx bx-chevron-up icon-close"></i
-                ></a>
-                <div
-                  id="faq-list-1"
-                  class="collapse show"
-                  data-bs-parent=".faq-list"
-                >
-                  <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id
-                    volutpat lacus laoreet non curabitur gravida. Venenatis
-                    lectus magna fringilla urna porttitor rhoncus dolor purus
-                    non.
-                  </p>
-                </div>
-              </li>
-
-              <li data-aos="fade-up" data-aos-delay="100">
-                <i class="bx bx-help-circle icon-help"></i>
-                <a
-                  data-bs-toggle="collapse"
-                  data-bs-target="#faq-list-2"
-                  class="collapsed"
-                  >Feugiat scelerisque varius morbi enim nunc?
-                  <i class="bx bx-chevron-down icon-show"></i
-                  ><i class="bx bx-chevron-up icon-close"></i
-                ></a>
-                <div
-                  id="faq-list-2"
-                  class="collapse"
-                  data-bs-parent=".faq-list"
-                >
-                  <p>
-                    Dolor sit amet consectetur adipiscing elit pellentesque
-                    habitant morbi. Id interdum velit laoreet id donec ultrices.
-                    Fringilla phasellus faucibus scelerisque eleifend donec
-                    pretium. Est pellentesque elit ullamcorper dignissim. Mauris
-                    ultrices eros in cursus turpis massa tincidunt dui.
-                  </p>
-                </div>
-              </li>
-
-              <li data-aos="fade-up" data-aos-delay="250">
-                <i class="bx bx-help-circle icon-help"></i>
-                <a
-                  data-bs-toggle="collapse"
-                  data-bs-target="#faq-list-3"
-                  class="collapsed"
-                  >Dolor sit amet consectetur adipiscing elit?
-                  <i class="bx bx-chevron-down icon-show"></i
-                  ><i class="bx bx-chevron-up icon-close"></i
-                ></a>
-                <div
-                  id="faq-list-3"
-                  class="collapse"
-                  data-bs-parent=".faq-list"
-                >
-                  <p>
-                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices
-                    sagittis orci. Faucibus pulvinar elementum integer enim. Sem
-                    nulla pharetra diam sit amet nisl suscipit. Rutrum tellus
-                    pellentesque eu tincidunt. Lectus urna duis convallis
-                    convallis tellus. Urna molestie at elementum eu facilisis
-                    sed odio morbi quis
-                  </p>
-                </div>
-              </li>
-
-              <li data-aos="fade-up" data-aos-delay="400">
-                <i class="bx bx-help-circle icon-help"></i>
-                <a
-                  data-bs-toggle="collapse"
-                  data-bs-target="#faq-list-4"
-                  class="collapsed"
-                  >Tempus quam pellentesque nec nam aliquam sem et tortor
-                  consequat? <i class="bx bx-chevron-down icon-show"></i
-                  ><i class="bx bx-chevron-up icon-close"></i
-                ></a>
-                <div
-                  id="faq-list-4"
-                  class="collapse"
-                  data-bs-parent=".faq-list"
-                >
-                  <p>
-                    Molestie a iaculis at erat pellentesque adipiscing commodo.
-                    Dignissim suspendisse in est ante in. Nunc vel risus commodo
-                    viverra maecenas accumsan. Sit amet nisl suscipit adipiscing
-                    bibendum est. Purus gravida quis blandit turpis cursus in.
-                  </p>
-                </div>
-              </li>
-
-              <li data-aos="fade-up" data-aos-delay="550">
-                <i class="bx bx-help-circle icon-help"></i>
-                <a
-                  data-bs-toggle="collapse"
-                  data-bs-target="#faq-list-5"
-                  class="collapsed"
-                  >Tortor vitae purus faucibus ornare. Varius vel pharetra vel
-                  turpis nunc eget lorem dolor?
-                  <i class="bx bx-chevron-down icon-show"></i
-                  ><i class="bx bx-chevron-up icon-close"></i
-                ></a>
-                <div
-                  id="faq-list-5"
-                  class="collapse"
-                  data-bs-parent=".faq-list"
-                >
-                  <p>
-                    Laoreet sit amet cursus sit amet dictum sit amet justo.
-                    Mauris vitae ultricies leo integer malesuada nunc vel.
-                    Tincidunt eget nullam non nisi est sit amet. Turpis nunc
-                    eget lorem dolor sed. Ut venenatis tellus in metus vulputate
-                    eu scelerisque.
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- End F.A.Q Section -->
-    </main>
-  </div>
+        </section>
+    </div>
+    <div class="footer">
+        <FooterView/>
+    </div>
 </template>
 
 <script>
+import NavbarView from '@/components/NavbarView.vue'
+import FooterView from '@/components/FooterView.vue'
 export default {
-  name: "ContainerView",
-};
+    name : "SuiviView",
+    components : {
+        NavbarView,
+        FooterView
+    }
+}
 </script>
 
 <style scoped lang="scss">
@@ -1034,10 +425,9 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  background: url("../../src/assets/img/hero-bg.jpg");
+  // background: url("../../src/assets/img/hero-bg.jpg");
   position: relative;
   padding: 120px 0 0 0;
- 
 }
 #hero:before {
   content: "";
@@ -1047,7 +437,6 @@ h6 {
   top: 0;
   left: 0;
   right: 0;
-  
 }
 #hero h1 {
   margin: 0 0 20px 0;
@@ -1650,7 +1039,6 @@ h6 {
   margin: 10px 0 5px 0;
   color: #fff;
 }
-
 .testimonials .testimonial-item h3 {
   font-size: 20px;
   font-weight: bold;

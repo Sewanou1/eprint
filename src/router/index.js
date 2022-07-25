@@ -1,11 +1,47 @@
 import AccueilView from '@/views/AccueilView.vue'
 import { createRouter, createWebHistory } from 'vue-router'
+import IindexView from '@/views/commande/IindexView.vue'
+import SuiviView from '@/views/suivi/SuiviView.vue'
+import ContactView from '@/views/contact/ContactView.vue'
+import InscriptionView from '@/views/register/InscriptionView.vue'
+import ConnexionView from '@/views/login/ConnexionView.vue'
+import DetailView from '@/views/commande/DetailView.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: AccueilView
+  },
+  {
+    path: '/commander',
+    name: 'Commander',
+    component: IindexView
+  },
+  {
+    path: '/suivi',
+    name: 'suivi',
+    component: SuiviView
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: ContactView
+  },
+  {
+    path: '/inscription',
+    name: 'inscription',
+    component: InscriptionView
+  },
+  {
+    path: '/connexion',
+    name: 'connexion',
+    component: ConnexionView
+  },
+  {
+    path: '/detail',
+    name: 'detail',
+    component: DetailView
   },
   {
     path: '/about',

@@ -10,17 +10,17 @@
 
         <nav id="navbar" class="navbar mt-10">
           <ul class="">
-            <li><a class="nav-link scrollto active" href="#">Accueil</a></li>
-            <li><a class="nav-link scrollto " href="#">Commander</a></li>
-            <li><a class="nav-link scrollto" href="#">Suivi</a></li>
-            <li><a class="nav-link scrollto" href="#">Historique</a></li>
-            <li><a class="nav-link scrollto" href="#">Contact</a></li>
+            <li><router-link to="/">Home</router-link></li>
+            <li><router-link to="/commander">Commander</router-link></li>
+            <li><router-link to="/suivi">Suivi</router-link></li>
+            <li><router-link to="/">Historique</router-link></li>
+            <li><router-link to="/contact">Contact</router-link></li>
           </ul>
 
           <ul class="ml-2">
-            <li><a class="nav-link scrollto ml-1" href="">S'inscrire</a></li>
+            <li><a class="nav-link scrollto ml-1" href="/inscription" >S'inscrire</a></li>
             <li class="dropdown">
-              <a href=""
+              <a href="/connexion"
                 ><span>Mon compte</span> <i class="bi bi-chevron-down"></i
               ></a>
             </li>
@@ -392,7 +392,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-//   background: url("../img/hero-bg.jpg");
+  // background: url("../../src/assets/img/hero-bg.jpg");
   position: relative;
   padding: 120px 0 0 0;
 }
