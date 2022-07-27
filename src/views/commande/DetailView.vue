@@ -2,8 +2,8 @@
   <div class="navbar">
     <NavbarView />
   </div>
-  <div class="hello" style="p">
-    <div class=" mt-10">
+  <div class="hello">
+    <div class="">
       <div class="row" style="">
         <div class="col-md-12">
           <div class="">
@@ -11,7 +11,7 @@
               <div class="col-md-12">
                 <div class="content content-full-width">
                   <!-- begin profile -->
-                  <div class="profile">
+                  <div class="profile" >
                     <div class="profile-header">
                       <!-- BEGIN profile-header-cover -->
                       <div class="profile-header-cover"></div>
@@ -39,615 +39,344 @@
                       <!-- END profile-header-content -->
                       <!-- BEGIN profile-header-tab -->
                       <ul class="profile-header-tab nav nav-tabs">
-                        <li class="nav-item">
-                          <a
-                            id="commande"
-                            href="#form_commander"
-                            class="nav-link_ active show"
-                            data-toggle="tab"
-                            >COMMANDER</a
-                          >
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">COMMANDER</button>
                         </li>
-                        <li class="nav-item">
-                          <a
-                            id="article"
-                            href="#nos_articles"
-                            class="nav-link_"
-                            data-toggle="tab"
-                            >ARTICLE</a
-                          >
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">ARTICLE</button>
                         </li>
-                        <li class="nav-item">
-                          <a
-                            id="catalogue"
-                            href="#notre_catalogue"
-                            class="nav-link_"
-                            data-toggle="tab"
-                            >CATALOGUE</a
-                          >
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">CATALOGUE</button>
                         </li>
-                        <li class="nav-item">
-                          <a
-                            id="presentation"
-                            href="#a_propos"
-                            class="nav-link_"
-                            data-toggle="tab"
-                            >PRESENTATION</a
-                          >
-                        </li>
+                                         <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false">PRESENTATION</button>
+                    </li>
                       </ul>
                       <!-- END profile-header-tab -->
                     </div>
-                  </div>
+                  </div>  
                   <!-- end profile -->
-                  <div class="tab-content">
-                    <!-- partie formulaire -->
-                    <div id="form_commander" class="tab-pane active">
-                      <section id="" class="section">
-                        <div class="container">
-                          <div class="row">
-                            <div class="col-lg-2"></div>
-                            <div class="col-lg-8">
-                              <div class="card">
-                                <div class="card-body">
-                                  <h5 class="card-title">
-                                    Commander votre impression
-                                  </h5>
-                                  <!-- General Form Elements -->
-                                  <form>
-                                    <div class="row mb-3">
-                                      <label
-                                        for="inputText"
-                                        class="col-sm-3 col-form-label"
-                                        >Nom</label
-                                      >
-                                      <div class="col-sm-9">
-                                        <input
-                                          type="text"
-                                          class="form-control"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                      <label
-                                        for="inputPassword"
-                                        class="col-sm-3 col-form-label"
-                                        >Prenom</label
-                                      >
-                                      <div class="col-sm-9">
-                                        <input
-                                          type="text"
-                                          class="form-control"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                      <label
-                                        for="inputEmail"
-                                        class="col-sm-3 col-form-label"
-                                        >Email</label
-                                      >
-                                      <div class="col-sm-9">
-                                        <input
-                                          type="email"
-                                          class="form-control"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                      <label
-                                        for="inputNumber"
-                                        class="col-sm-3 col-form-label"
-                                        >Contact</label
-                                      >
-                                      <div class="col-sm-9">
-                                        <input
-                                          type="number"
-                                          class="form-control"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                      <label
-                                        for="inputNumber"
-                                        class="col-sm-3 col-form-label"
-                                        >Document à imprimer</label
-                                      >
-                                      <div class="col-sm-9">
-                                        <input
-                                          class="form-control"
-                                          type="file"
-                                          id="formFile"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                      <label class="col-sm-3 col-form-label"
-                                        >Couleur</label
-                                      >
-                                      <div class="col-sm-9">
-                                        <select
-                                          class="form-select"
-                                          aria-label="Default select example"
-                                        >
-                                          <option selected>Blanc noir</option>
-                                          <option value="1">A Couleur</option>
-                                          <option value="2">
-                                            Impression de carte de visite
-                                          </option>
-                                          <option value="3">
-                                            Impression de carte de mariage
-                                          </option>
-                                        </select>
-                                      </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                      <label class="col-sm-3 col-form-label"
-                                        >Type d'impression</label
-                                      >
-                                      <div class="col-sm-9">
-                                        <select
-                                          class="form-select"
-                                          aria-label="Default select example"
-                                        >
-                                          <option selected>
-                                            Impression de fichier pdf
-                                          </option>
-                                          <option value="1">
-                                            Impression de bâche
-                                          </option>
-                                          <option value="2">
-                                            Impression de carte de visite
-                                          </option>
-                                          <option value="3">
-                                            Impression de carte de mariage
-                                          </option>
-                                        </select>
-                                      </div>
-                                    </div>
+  
+                    <div class="tab-content" id="pills-tabContent">
+                      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                        <section id="" class="section">
+                            <div class="container  mt-5">
+                                <div class="row ">
+                                    <div class="col-lg-2"></div>
+                                    <div class="col-lg-8">
+                                        <div class="card">
+                                            <div class="card-body" >
+                                                <h5 class="card-title">Commander votre impression</h5>
+                                                <!-- General Form Elements -->
+                                                <form>
+                                                    <div class="row mb-3">
+                                                        <label for="inputText" class="col-sm-3 col-form-label">Nom</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label for="inputPassword" class="col-sm-3 col-form-label">Prenom</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label for="inputEmail" class="col-sm-3 col-form-label">Email</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="email" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label for="inputNumber" class="col-sm-3 col-form-label">Contact</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="number" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label for="inputNumber" class="col-sm-3 col-form-label">Document à imprimer</label>
+                                                        <div class="col-sm-9">
+                                                            <input class="form-control" type="file" id="formFile">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="col-sm-3 col-form-label">Couleur</label>
+                                                        <div class="col-sm-9">
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option selected>Blanc noir </option>
+                                                                <option value="1">A Couleur</option>
+                                                                <option value="2">Impression de carte de visite</option>
+                                                                <option value="3">Impression de carte de mariage</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="col-sm-3 col-form-label">Type d'impression</label>
+                                                        <div class="col-sm-9">
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option selected>Impression de fichier pdf</option>
+                                                                <option value="1">Impression de bâche</option>
+                                                                <option value="2">Impression de carte de visite</option>
+                                                                <option value="3">Impression de carte de mariage</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
 
-                                    <div class="row mb-3">
-                                      <label class="col-sm-3 col-form-label"
-                                        >Format voulu</label
-                                      >
-                                      <div class="col-sm-9">
-                                        <select
-                                          class="form-select"
-                                          aria-label="Default select example"
-                                        >
-                                          <option selected>
-                                            Impression de fichier pdf
-                                          </option>
-                                          <option value="1">
-                                            Impression de bâche
-                                          </option>
-                                          <option value="2">
-                                            Impression de carte de visite
-                                          </option>
-                                          <option value="3">
-                                            Impression de carte de mariage
-                                          </option>
-                                        </select>
-                                      </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                      <label
-                                        for="inputDate"
-                                        class="col-sm-3 col-form-label"
-                                        >Délai</label
-                                      >
-                                      <div class="col-sm-9">
-                                        <input
-                                          type="date"
-                                          class="form-control"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                      <label
-                                        for="inputPassword"
-                                        class="col-sm-3 col-form-label"
-                                        >Détail && Exigence</label
-                                      >
-                                      <div class="col-sm-9">
-                                        <textarea
-                                          class="form-control"
-                                          style="height: 100px"
-                                        ></textarea>
-                                      </div>
-                                    </div>
-                                    <fieldset class="row mb-3">
-                                      <legend
-                                        class="col-form-label col-sm-3 pt-0"
-                                      >
-                                        Caractère du document
-                                      </legend>
-                                      <div class="col-sm-9">
-                                        <div class="form-check">
-                                          <input
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="gridRadios"
-                                            id="gridRadios1"
-                                            value="option1"
-                                            checked
-                                          />
-                                          <label
-                                            class="form-check-label"
-                                            for="gridRadios1"
-                                          >
-                                            Confidentiel
-                                          </label>
+                                                    <div class="row mb-3">
+                                                        <label class="col-sm-3 col-form-label">Format voulu</label>
+                                                        <div class="col-sm-9">
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option selected>Impression de fichier pdf</option>
+                                                                <option value="1">Impression de bâche</option>
+                                                                <option value="2">Impression de carte de visite</option>
+                                                                <option value="3">Impression de carte de mariage</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label for="inputDate" class="col-sm-3 col-form-label">Délai</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="date" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label for="inputPassword" class="col-sm-3 col-form-label">Détail &&
+                                                            Exigence</label>
+                                                        <div class="col-sm-9">
+                                                            <textarea class="form-control" style="height: 100px"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <fieldset class="row mb-3">
+                                                        <legend class="col-form-label col-sm-3 pt-0">Caractère du document</legend>
+                                                        <div class="col-sm-9">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio" name="gridRadios"
+                                                                    id="gridRadios1" value="option1" checked>
+                                                                <label class="form-check-label" for="gridRadios1">
+                                                                    Confidentiel
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio" name="gridRadios"
+                                                                    id="gridRadios2" value="option2">
+                                                                <label class="form-check-label" for="gridRadios2">
+                                                                    Non confidentiel
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check disabled">
+                                                                <input class="form-check-input" type="radio" name="gridRadios"
+                                                                    id="gridRadios" value="option">
+                                                                <label class="form-check-label" for="gridRadios3">
+                                                                    Public
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+
+                                                    <div class="row mb-3">
+
+                                                        <button type="submit" class="btn btn-primary">Envoyer</button>
+
+                                                    </div>
+
+                                                </form><!-- End General Form Elements -->
+
+                                            </div>
                                         </div>
-                                        <div class="form-check">
-                                          <input
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="gridRadios"
-                                            id="gridRadios2"
-                                            value="option2"
-                                          />
-                                          <label
-                                            class="form-check-label"
-                                            for="gridRadios2"
-                                          >
-                                            Non confidentiel
-                                          </label>
-                                        </div>
-                                        <div class="form-check disabled">
-                                          <input
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="gridRadios"
-                                            id="gridRadios"
-                                            value="option"
-                                          />
-                                          <label
-                                            class="form-check-label"
-                                            for="gridRadios3"
-                                          >
-                                            Public
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </fieldset>
 
-                                    <div class="row mb-3">
-                                      <button
-                                        type="submit"
-                                        class="btn btn-primary"
-                                      >
-                                        Envoyer
-                                      </button>
                                     </div>
-                                  </form>
-                                  <!-- End General Form Elements -->
+                                    <div class="col-lg-2"></div>
                                 </div>
-                              </div>
                             </div>
-                            <div class="col-lg-2"></div>
-                          </div>
+                        </section>
+                      </div>
+                      <div class="tab-pane" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                        <section id="team" class="team">
+                            <div class="container">
+
+                                <div class="section-title" data-aos="fade-up">
+                                    <h2 class="mt-5">Article</h2>
+                                    <p>Nos articles</p>
+                                </div>
+
+                                <div class="row" data-aos="fade-left">
+
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="member" data-aos="zoom-in" data-aos-delay="100">
+
+                                            <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"  data-aos-delay="10">
+                                                <div class="pic"><img src="../../assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
+                                            </a>
+                                            <div class="member-info">
+                                                <a href="">
+                                                    <h4>Flyers</h4>
+                                                </a>
+                                                <div>
+                                                    <span>Prix : 25$</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+  <!-- <div class="container mt-5">
+    <div>
+      <b-button v-b-modal.modal-center>Show Centered Modal</b-button>
+      <b-modal id="modal-center" centered title="Vue Bootstrap Centered Modal Example">
+        <p class="my-4">Content goes here...</p>
+      </b-modal>
+    </div>    
+  </div>
+                                         -->
+                                    </div>
+
+
+                                    <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+                                        <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                                            <div class="pic"><img src="../../assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+                                            <div class="member-info">
+                                                <h4>Flyers</h4>
+                                                <div>
+                                                    <span>Prix : 25$</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                                        <div class="member" data-aos="zoom-in" data-aos-delay="300">
+                                            <div class="pic"><img src="../../assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+                                            <div class="member-info">
+                                                <h4>Flyers</h4>
+                                                <div>
+                                                    <span>Prix : 25$</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                                        <div class="member" data-aos="zoom-in" data-aos-delay="400">
+                                            <div class="pic"><img src="../../assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+                                            <div class="member-info">
+                                                <h4>Flyers</h4>
+                                                <div>
+                                                    <span>Prix : 25$</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </section>
+
+                      </div>
+                      <div class="tab-pane" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+                        <section id="team" class="team">
+                            <div class="container">
+
+                                <div class="section-title" data-aos="fade-up">
+                                    <h2>CATALOGUE</h2>
+                                    <p>NOS REALISATIONS</p>
+                                </div>
+
+                                <div class="row g-0" data-aos="fade-left">
+
+                                    <div class="col-lg-3 col-md-4">
+                                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                                            <a href="../../assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
+                                                <img src="../../assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-4">
+                                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
+                                            <a href="../../assets/img/gallery/gallery-2.jpg" class="gallery-lightbox">
+                                                <img src="../../assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-4">
+                                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                                            <a href="../../assets/img/gallery/gallery-3.jpg" class="gallery-lightbox">
+                                                <img src="../../assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-4">
+                                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250">
+                                            <a href="../../assets/img/gallery/gallery-4.jpg" class="gallery-lightbox">
+                                                <img src="../../assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-4">
+                                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                                            <a href="../../assets/img/gallery/gallery-5.jpg" class="gallery-lightbox">
+                                                <img src="../../assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-4">
+                                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="350">
+                                            <a href="../../assets/img/gallery/gallery-6.jpg" class="gallery-lightbox">
+                                                <img src="../../assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-4">
+                                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                                            <a href="../../assets/img/gallery/gallery-7.jpg" class="gallery-lightbox">
+                                                <img src="../../assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-4">
+                                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="450">
+                                            <a href="../../assets/img/gallery/gallery-8.jpg" class="gallery-lightbox">
+                                                <img src="../../assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </section>
+                      </div>
+
+                      <div class="tab-pane" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">
+                    <section id="team" class="team">
+                        <div class="container " >
+                            <div class="section-title" data-aos="fade-up">
+                                <h2>A PROPOS</h2>
+                                <p>PRESENTATION GENERALE</p>
+                            </div>
+                            <div class="" style="text-align:justify ;">
+                                <p>Soyez les bienvenus sur notre centre d'impression</p>
+                                <P>Nous sommes un centre d'expertise en impression qui est à votre disposition pour toute vos commandes en
+                                    imprimérie. Nous offrons la meilleurs qualité des services au clients et tout ça dans des délais bien
+                                    respecté. Quelque soit le caractère de votre document, l'impression se passe en toute securité. Notre centre prend en compte la sécurisation de l’impression des documents à
+                                    caractère confidentiel pour certains clients. Une destruction totale du fichier de sa base
+                                    de données après impression de ce dernier, ceci si le client mentionne le caractère
+                                    confidentiel de son document au cours de sa commande.</P>
+                                <p>Vos commandes sont livré par notre centre en toute sécurité. Faite nous confiance et vous ne serez pas
+                                    deçu. </p>
+                                <P>Pour le meilleur et le bien des client nous oeuvrons. Merci!!!</P>
+                            </div>
+
                         </div>
-                      </section>
+                    </section>
+                      </div>
                     </div>
-
-                    <!-- article -->
-                    <div id="nos_articles" class="tab-pane fade">
-                      <section id="team" class="team">
-                        <div class="container">
-                          <div class="section-title" data-aos="fade-up">
-                            <h2 class="mt-5">Article</h2>
-                            <p>Nos articles</p>
-                          </div>
-
-                          <div class="row" data-aos="fade-left">
-                            <div class="col-lg-3 col-md-6">
-                              <div
-                                class="member"
-                                data-aos="zoom-in"
-                                data-aos-delay="100"
-                              >
-                                <a
-                                  href=""
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#exampleModal"
-                                >
-                                  <div class="pic">
-                                    <img
-                                      src="assets/img/team/team-1.jpg"
-                                      class="img-fluid"
-                                      alt=""
-                                    />
-                                  </div>
-                                </a>
-                                <div class="member-info">
-                                  <a href="">
-                                    <h4>Flyers</h4>
-                                  </a>
-                                  <div>
-                                    <span>Prix : 25$</span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-                              <div
-                                class="member"
-                                data-aos="zoom-in"
-                                data-aos-delay="200"
-                              >
-                                <div class="pic">
-                                  <img
-                                    src="assets/img/team/team-2.jpg"
-                                    class="img-fluid"
-                                    alt=""
-                                  />
-                                </div>
-                                <div class="member-info">
-                                  <h4>Flyers</h4>
-                                  <div>
-                                    <span>Prix : 25$</span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-                              <div
-                                class="member"
-                                data-aos="zoom-in"
-                                data-aos-delay="300"
-                              >
-                                <div class="pic">
-                                  <img
-                                    src="assets/img/team/team-3.jpg"
-                                    class="img-fluid"
-                                    alt=""
-                                  />
-                                </div>
-                                <div class="member-info">
-                                  <h4>Flyers</h4>
-                                  <div>
-                                    <span>Prix : 25$</span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-                              <div
-                                class="member"
-                                data-aos="zoom-in"
-                                data-aos-delay="400"
-                              >
-                                <div class="pic">
-                                  <img
-                                    src="assets/img/team/team-4.jpg"
-                                    class="img-fluid"
-                                    alt=""
-                                  />
-                                </div>
-                                <div class="member-info">
-                                  <h4>Flyers</h4>
-                                  <div>
-                                    <span>Prix : 25$</span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-
-                    <!-- catalogue -->
-                    <div id="notre_catalogue" class="tab-pane fade">
-                      <section id="team" class="team">
-                        <div class="container">
-                          <div class="section-title" data-aos="fade-up">
-                            <h2>CATALOGUE</h2>
-                            <p>NOS REALISATIONS</p>
-                          </div>
-
-                          <div class="row g-0" data-aos="fade-left">
-                            <div class="col-lg-3 col-md-4">
-                              <div
-                                class="gallery-item"
-                                data-aos="zoom-in"
-                                data-aos-delay="100"
-                              >
-                                <a
-                                  href="assets/img/gallery/gallery-1.jpg"
-                                  class="gallery-lightbox"
-                                >
-                                  <img
-                                    src="assets/img/gallery/gallery-1.jpg"
-                                    alt=""
-                                    class="img-fluid"
-                                  />
-                                </a>
-                              </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-4">
-                              <div
-                                class="gallery-item"
-                                data-aos="zoom-in"
-                                data-aos-delay="150"
-                              >
-                                <a
-                                  href="assets/img/gallery/gallery-2.jpg"
-                                  class="gallery-lightbox"
-                                >
-                                  <img
-                                    src="assets/img/gallery/gallery-2.jpg"
-                                    alt=""
-                                    class="img-fluid"
-                                  />
-                                </a>
-                              </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-4">
-                              <div
-                                class="gallery-item"
-                                data-aos="zoom-in"
-                                data-aos-delay="200"
-                              >
-                                <a
-                                  href="assets/img/gallery/gallery-3.jpg"
-                                  class="gallery-lightbox"
-                                >
-                                  <img
-                                    src="assets/img/gallery/gallery-3.jpg"
-                                    alt=""
-                                    class="img-fluid"
-                                  />
-                                </a>
-                              </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-4">
-                              <div
-                                class="gallery-item"
-                                data-aos="zoom-in"
-                                data-aos-delay="250"
-                              >
-                                <a
-                                  href="assets/img/gallery/gallery-4.jpg"
-                                  class="gallery-lightbox"
-                                >
-                                  <img
-                                    src="assets/img/gallery/gallery-4.jpg"
-                                    alt=""
-                                    class="img-fluid"
-                                  />
-                                </a>
-                              </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-4">
-                              <div
-                                class="gallery-item"
-                                data-aos="zoom-in"
-                                data-aos-delay="300"
-                              >
-                                <a
-                                  href="assets/img/gallery/gallery-5.jpg"
-                                  class="gallery-lightbox"
-                                >
-                                  <img
-                                    src="assets/img/gallery/gallery-5.jpg"
-                                    alt=""
-                                    class="img-fluid"
-                                  />
-                                </a>
-                              </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-4">
-                              <div
-                                class="gallery-item"
-                                data-aos="zoom-in"
-                                data-aos-delay="350"
-                              >
-                                <a
-                                  href="assets/img/gallery/gallery-6.jpg"
-                                  class="gallery-lightbox"
-                                >
-                                  <img
-                                    src="assets/img/gallery/gallery-6.jpg"
-                                    alt=""
-                                    class="img-fluid"
-                                  />
-                                </a>
-                              </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-4">
-                              <div
-                                class="gallery-item"
-                                data-aos="zoom-in"
-                                data-aos-delay="400"
-                              >
-                                <a
-                                  href="assets/img/gallery/gallery-7.jpg"
-                                  class="gallery-lightbox"
-                                >
-                                  <img
-                                    src="assets/img/gallery/gallery-7.jpg"
-                                    alt=""
-                                    class="img-fluid"
-                                  />
-                                </a>
-                              </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-4">
-                              <div
-                                class="gallery-item"
-                                data-aos="zoom-in"
-                                data-aos-delay="450"
-                              >
-                                <a
-                                  href="assets/img/gallery/gallery-8.jpg"
-                                  class="gallery-lightbox"
-                                >
-                                  <img
-                                    src="assets/img/gallery/gallery-8.jpg"
-                                    alt=""
-                                    class="img-fluid"
-                                  />
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-
-                    <!-- A propos -->
-                    <div id="a_propos" class="tab-pane fade">
-                      <section id="team" class="team">
-                        <div class="container">
-                          <div class="section-title" data-aos="fade-up">
-                            <h2>A PROPOS</h2>
-                            <p>PRESENTATION GENERALE</p>
-                          </div>
-                          <div class="" style="text-align: justify">
-                            <p>
-                              Soyez les bienvenus sur notre centre d'impression
-                            </p>
-                            <P
-                              >Nous sommes un centre d'expertise en impression
-                              qui est à votre disposition pour toute vos
-                              commandes en imprimérie. Nous offrons la meilleurs
-                              qualité des services au clients et tout ça dans
-                              des délais bien respecté. Quelque soit le
-                              caractère de votre document, l'impression se passe
-                              en toute securité. Notre centre prend en compte la
-                              sécurisation de l’impression des documents à
-                              caractère confidentiel pour certains clients. Une
-                              destruction totale du fichier de sa base de
-                              données après impression de ce dernier, ceci si le
-                              client mentionne le caractère confidentiel de son
-                              document au cours de sa commande.</P
-                            >
-                            <p>
-                              Vos commandes sont livré par notre centre en toute
-                              sécurité. Faite nous confiance et vous ne serez
-                              pas deçu.
-                            </p>
-                            <P
-                              >Pour le meilleur et le bien des client nous
-                              oeuvrons. Merci!!!</P
-                            >
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </div>
 
                   <!-- end profile-content -->
                 </div>
@@ -662,9 +391,9 @@
     <FooterView />
   </div>
 
-  <!-- Modal -->
-<div class="modal fade z" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
-    style="z-index: 1000">
+    <!-- Modal -->
+ <div class="modal fade z" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+>
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -686,14 +415,6 @@
 </template>
 
 <script>
-
-// $(document).ready(function(){
-//     $(".nav-tabs a").click(function(){
-//       $(this).tab('show');
-//     });
-// });
-  
-
 import NavbarView from "@/components/NavbarView.vue";
 import FooterView from "@/components/FooterView.vue";
 
@@ -713,7 +434,7 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 .hello {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .profile-header {
@@ -908,4 +629,4 @@ body {
 .section {
   background-color: #fff;
 }
-</style>>
+</style>

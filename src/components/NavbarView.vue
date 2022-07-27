@@ -4,14 +4,14 @@
       <div class="container d-flex align-items-center justify-content-between">
         <div class="logo">
           <h1>
-            <a href="#"><span  style="font-family:Montserrat">E-PRINT</span></a>
+            <a href="/"><span  style="font-family:Montserrat;font-weight: 700;font-size: 28px;">E-PRINT</span></a>
           </h1>
         </div>
 
         <nav id="navbar" class="navbar mt-10">
           <ul class="">
-            <li><router-link to="/">Home</router-link></li>
-            <li><router-link to="/commander">Commander</router-link></li>
+            <li ><router-link to="/">Accueil</router-link></li>
+            <li><router-link  to="/commander">Commander</router-link></li>
             <li><router-link to="/suivi">Suivi</router-link></li>
             <li><router-link to="/">Historique</router-link></li>
             <li><router-link to="/contact">Contact</router-link></li>
@@ -21,7 +21,7 @@
             <li><a class="nav-link scrollto ml-1" href="/inscription" >S'inscrire</a></li>
             <li class="dropdown">
               <a href="/connexion"
-                ><span>Mon compte</span> <i class="bi bi-chevron-down"></i
+                ><span>Se connecter</span> <i class="bi bi-chevron-down"></i
               ></a>
             </li>
           </ul>
@@ -168,7 +168,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 60px;
 }
 #header .logo h1 {
-    font-family: Montserrat;
+  font-family: Montserrat;
   font-size: 28px;
   margin: 0;
   padding: 0;
