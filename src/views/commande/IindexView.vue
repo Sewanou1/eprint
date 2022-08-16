@@ -10,11 +10,11 @@
           <h2 class="mt-5">Imprimeurs</h2>
           <p>Nos centres d'impression</p>
         </div>
-
+  
         <div class="row" data-aos="fade-left">
           <div class="col-lg-3 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <a href="/detail">
+              <router-link to="/detail">
                 <div class="pic">
                   <img
                     src="../../assets/img/team/team-1.jpg"
@@ -22,7 +22,7 @@
                     alt=""
                   />
                 </div>
-              </a>
+              </router-link>
               <div class="member-info">
                 <a href="/detail">
                   <h4>ETS Impression</h4>

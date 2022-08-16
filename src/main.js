@@ -11,14 +11,6 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 //import './assets/js/afficharge.js'
-createApp({
-    data() {
-        return {
-          message
-        }
-      }
-    
-})
 export const app = createApp(App)
 
 app.AOS = new AOS.init({ disable: "phone" });

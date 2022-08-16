@@ -9,23 +9,19 @@
         </div>
 
         <nav id="navbar" class="navbar mt-10">
-          <ul class="">
-            <li ><router-link to="/">Accueil</router-link></li>
-            <li><router-link  to="/commander">Commander</router-link></li>
-            <li><router-link to="/suivi">Suivi</router-link></li>
-            <li><router-link to="/">Historique</router-link></li>
-            <li><router-link to="/contact">Contact</router-link></li>
-          </ul>
-
-          <ul class="ml-2">
-            <li><a class="nav-link scrollto ml-1" href="/inscription" >S'inscrire</a></li>
-            <li class="dropdown">
-              <a href="/connexion"
-                ><span>Se connecter</span> <i class="bi bi-chevron-down"></i
-              ></a>
-            </li>
-          </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
+          <ul>
+            <router-link to="/">Accueil</router-link>
+            <router-link  to="/commander">Commander</router-link>
+            <router-link to="/suivi">Suivi</router-link>
+            <router-link to="/contact">Contact</router-link> 
+         </ul>
+        <ul class="auth ml-2">
+            <router-link to="/inscription">S'inscrire</router-link> 
+            <router-link to="/connexion">Se connecter</router-link>            
+          </ul>  
+          <ul>
+            <router-link to="/panier"><i class="ri-shopping-cart-2-line ri-2x" ></i>(0)</router-link>
+          </ul>      
         </nav>
         <!-- .navbar -->
       </div>
@@ -37,6 +33,7 @@
 <script>
 export default {
   name: "NavbarView",
+
 };
 </script>
 
@@ -54,6 +51,10 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
 }
+ 
+// nav {
+
+// }
 
 a {
   color: #1acc8d;
@@ -191,8 +192,18 @@ h1, h2, h3, h4, h5, h6 {
 /**
 * Desktop Navigation
 */
-.navbar {
+nav {
   padding: 0;
+
+  a {
+    font-weight: bold;
+    color: #0d12fc;
+    margin-right: 20px;
+
+  &.router-link-exact-active {
+    border-bottom: solid 2.5px #1acc8d;
+  }
+}
 }
 .navbar ul {
   margin: 0;
@@ -200,15 +211,17 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   list-style: none;
   align-items: center;
+
+  
 }
 .navbar li {
   position: relative;
 }
+
 .navbar a, .navbar a:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 10px 30px;
   font-size: 15px;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
@@ -216,23 +229,24 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   transition: 0.3s;
 }
+
 .navbar a i, .navbar a:focus i {
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
 }
-.navbar > ul > li > a:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 3px;
-  left: 30px;
-  background-color: #1acc8d;
-  visibility: hidden;
-  width: 0px;
-  transition: all 0.3s ease-in-out 0s;
-}
+// .navbar > ul > li > a:before {
+//   content: "";
+//   position: absolute;
+//   width: 0;
+//   height: 2px;
+//   bottom: 3px;
+//   left: 30px;
+//   background-color: #1acc8d;
+//   visibility: hidden;
+//   width: 0px;
+//   transition: all 0.3s ease-in-out 0s;
+// }
 .navbar a:hover:before, .navbar li:hover > a:before, .navbar .active:before {
   visibility: visible;
   width: 25px;

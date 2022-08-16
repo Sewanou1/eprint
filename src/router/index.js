@@ -6,6 +6,7 @@ import ContactView from '@/views/contact/ContactView.vue'
 import InscriptionView from '@/views/register/InscriptionView.vue'
 import ConnexionView from '@/views/login/ConnexionView.vue'
 import DetailView from '@/views/commande/DetailView.vue'
+import PanierView from '@/views/panier/PanierView.vue'
 
 const routes = [
   {
@@ -42,6 +43,11 @@ const routes = [
     path: '/detail',
     name: 'detail',
     component: DetailView
+  },  
+  {
+    path: '/panier',
+    name: 'panier',
+    component: PanierView
   },
   {
     path: '/about',
