@@ -43,14 +43,18 @@
                     <th>Commandes</th>
                     <th>Prix unitaire (XOF)</th>
                     <th>Quantité</th>
-                    <th>Montant</th>
                     <th>Actions</th>
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>Impression de carte d mariage</td>
-                    <td>250</td>
+                <tr v-for="(article,index) in getCart" :key="index">
+                    <td>
+                        -{{ article.typeImpression }} <br>
+                        -{{ article.couleur }} <br>
+                        -{{ article.format}} <br>
+                        -{{ article.livraison}} <br>
+                    </td>
+                    <td>8</td>
                     <td> 5
                         <!-- <div id="app">
                             <div>
@@ -59,30 +63,100 @@
                                 <button v-on:click="dimunierAge">-</button>
                             </div>
                         </div> -->
-
                     </td>
-                    <td>100</td>
-                    <td style="text-align:center">   
-                        <button type="submit" class="btn btn-danger btn-sm">
+                    <td style="text-align:center; justify-content: space-between;">   
+                        <button type="submit" class="btn btn-danger btn-sm ">
                             <i class="fas fa-trash"></i>Supprimer
                         </button>
+
+                        <!-- <button type="submit" class="btn btn-info btn-sm ">
+                            <i class="fas fa-trash"></i>Consulter
+                        </button> -->
                     </td>
                   </tr>
 
                   </tbody>
                   <tfoot>
-                  <tr>
+                  <!-- <tr>
                     <th colspan="5" >   
                         <button type="submit" class="btn btn-success  float-end">
                             <i class="fas fa-trash"></i>Demandez devis
                         </button>
                     </th>
 
-                  </tr>
+                  </tr> -->
                   </tfoot>
                 </table>
+                <div class="row mt-5">
+                    <div class="col-lg-8">
+                        <input type="hidden" name="_token" value="JvlWGUbNewVMiShDufYXkAJQOaKwtfJ80lfoHViL">
+                        <div class="row gy-4">
+
+                            <div class="col-md-6">
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Nom" value="">
+                            </div>
+
+                            <div class="col-md-6 ">
+                                <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Prenom" value="">
+                            </div>
+
+                            <div class="col-md-4 ">
+                                <input type="text" class="form-control" name="telephone" id="telephone" placeholder="Téléphone" value="">
+                            </div>
+
+                            <div class="col-md-4">
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Adresse" value="">
+                            </div>
+
+
+                            <div class="col-md-4 ">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Adresse Mail" value="">
+                            </div>
+
+
+
+      
+                        </div>
+                </div>
+
+                <div class="col-lg-4">
+                     <div class="row">
+                        <div class="col-md-6 " >
+
+                        </div>
+                        <div class="col-md-6 " >
+                           <button type="submit" class="btn btn-warning form-control float-end " >
+                            <i class="fas fa-trash"></i>Demandez devis
+                            </button>
+                        </div>
+                     </div>
+                       <div class="row mt-4">
+                        <div class="col-md-6 " >
+                        </div>
+                        <div class="col-md-6">
+                         <button type="submit" class="btn btn-success form-control float-end" >
+                            <i class="fas fa-trash"></i>Commandez <i class="ri-shopping-cart-2-line" >   </i>
+                        </button>
+                        </div>
+                       </div>
+                </div>
+                </div>
                 <hr>
-                <h5>Les moyens de paiements disponibles</h5>
+                <h5 class="mb-5">Les moyens de paiements disponibles</h5>
+                <div class="row">
+                    <div class="col-2"><img src="../../../src/assets/images/mtn.jpg" alt="" style="height:80px; width: 80px;"></div>
+                    <div class="col-2"> <img src="../../../src/assets/images/moov.png" alt="" style="height:80px ; width: 80px;"></div>
+                    <div class="col-2"><img src="../../../src/assets/images/mastercard.png" alt="" style="height:80px; width: 80px;"></div>
+                    <div class="col-2"><img src="../../../src/assets/images/american.png" alt="" style="height:80px; width: 80px;"></div>
+                    <div class="col-2"><img src="../../../src/assets/images/mtn.jpg" alt="" style="height:80px; width: 80px;"></div>
+                    <div class="col-2"> <img src="../../../src/assets/images/moov.png" alt="" style="height:80px; width: 80px;"></div>
+
+
+                    
+                   
+                    
+                    
+                </div>
               </div>
               <!-- /.card-body -->
             </div>
@@ -117,6 +191,12 @@ export default {
     NavbarView,
     FooterView,
   },
+
+  computed : {
+    getCart(){
+        return this.$store.state.cart;
+    }
+  }
 };
 
 </script>
@@ -144,7 +224,7 @@ html {
 .layout-boxed .wrapper,
 .layout-boxed .wrapper::before {
     margin: 0 auto;
-    max-width: 1250px;
+    max-width: 1280px;
     overflow: hidden
 }
 
@@ -207,7 +287,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
 
 .layout-navbar-fixed .wrapper .main-sidebar:hover .brand-link {
     transition: width .3s ease-in-out;
-    width: 250px
+    width: 280px
 }
 
 .layout-navbar-fixed .wrapper .brand-link {
@@ -215,7 +295,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
     position: fixed;
     top: 0;
     transition: width .3s ease-in-out;
-    width: 250px;
+    width: 280px;
     z-index: 1035
 }
 
@@ -525,7 +605,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
 
 .layout-navbar-fixed .wrapper.sidebar-collapse .main-sidebar:hover .brand-link {
     transition: width .3s ease-in-out;
-    width: 250px
+    width: 280px
 }
 
 .layout-navbar-fixed .wrapper .brand-link {
@@ -533,7 +613,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
     position: fixed;
     top: 0;
     transition: width .3s ease-in-out;
-    width: 250px;
+    width: 280px;
     z-index: 1035
 }
 
@@ -633,7 +713,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
 
     .layout-sm-navbar-fixed .wrapper.sidebar-collapse .main-sidebar:hover .brand-link {
         transition: width .3s ease-in-out;
-        width: 250px
+        width: 280px
     }
 
     .layout-sm-navbar-fixed .wrapper .brand-link {
@@ -641,7 +721,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
         position: fixed;
         top: 0;
         transition: width .3s ease-in-out;
-        width: 250px;
+        width: 280px;
         z-index: 1035
     }
 
@@ -742,7 +822,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
 
     .layout-md-navbar-fixed .wrapper.sidebar-collapse .main-sidebar:hover .brand-link {
         transition: width .3s ease-in-out;
-        width: 250px
+        width: 280px
     }
 
     .layout-md-navbar-fixed .wrapper .brand-link {
@@ -750,7 +830,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
         position: fixed;
         top: 0;
         transition: width .3s ease-in-out;
-        width: 250px;
+        width: 280px;
         z-index: 1035
     }
 
@@ -851,7 +931,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
 
     .layout-lg-navbar-fixed .wrapper.sidebar-collapse .main-sidebar:hover .brand-link {
         transition: width .3s ease-in-out;
-        width: 250px
+        width: 280px
     }
 
     .layout-lg-navbar-fixed .wrapper .brand-link {
@@ -859,7 +939,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
         position: fixed;
         top: 0;
         transition: width .3s ease-in-out;
-        width: 250px;
+        width: 280px;
         z-index: 1035
     }
 
@@ -960,7 +1040,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
 
     .layout-xl-navbar-fixed .wrapper.sidebar-collapse .main-sidebar:hover .brand-link {
         transition: width .3s ease-in-out;
-        width: 250px
+        width: 280px
     }
 
     .layout-xl-navbar-fixed .wrapper .brand-link {
@@ -968,7 +1048,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
         position: fixed;
         top: 0;
         transition: width .3s ease-in-out;
-        width: 250px;
+        width: 280px;
         z-index: 1035
     }
 
@@ -1180,7 +1260,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
 .main-sidebar,
 .main-sidebar::before {
     transition: margin-left .3s ease-in-out, width .3s ease-in-out;
-    width: 250px
+    width: 280px
 }
 
 @media (prefers-reduced-motion:reduce) {
@@ -1194,7 +1274,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
 
 .sidebar-collapse .main-sidebar,
 .sidebar-collapse .main-sidebar::before {
-    margin-left: -250px
+    margin-left: -280px
 }
 
 .sidebar-collapse .main-sidebar .nav-sidebar.nav-child-indent .nav-treeview {
@@ -1206,7 +1286,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
     .main-sidebar,
     .main-sidebar::before {
         box-shadow: none !important;
-        margin-left: -250px
+        margin-left: -280px
     }
 
     .sidebar-open .main-sidebar,
@@ -1227,7 +1307,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 }
 
 .layout-fixed .brand-link {
-    width: 250px
+    width: 280px
 }
 
 .layout-fixed .main-sidebar {
@@ -1864,7 +1944,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 
 .navbar-dark .form-control-navbar:focus,
 .navbar-dark .form-control-navbar:focus+.input-group-append .btn-navbar {
-    background-color: #495057;
+    background-color: #498057;
     border-color: #6c757d !important;
     color: #ced4da
 }

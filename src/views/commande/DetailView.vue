@@ -82,43 +82,44 @@
                                                             <h5 class="card-title">Commander votre impression</h5>
                                                             <!-- General Form Elements -->
                                                             <form>
-                                                                <div class="row mb-3">
+                                                                <!-- <div class="row mb-3">
                                                                     <label for="inputNumber"
                                                                         class="col-sm-3 col-form-label">Document à
                                                                         imprimer</label>
                                                                     <div class="col-sm-9">
                                                                         <input class="form-control" type="file"
-                                                                            id="formFile">
+                                                                            id="formFile" >
                                                                     </div>
-                                                                </div>
-                                                                <div class="row mb-3">
-                                                                    <label
-                                                                        class="col-sm-3 col-form-label">Couleur</label>
-                                                                    <div class="col-sm-9">
-                                                                        <select class="form-select"
-                                                                            aria-label="Default select example">
-                                                                            <option selected>Blanc noir </option>
-                                                                            <option value="1">A Couleur</option>
-                                                                            <option value="2">Impression de carte de
-                                                                                visite</option>
-                                                                            <option value="3">Impression de carte de
-                                                                                mariage</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
+                                                                </div> -->
                                                                 <div class="row mb-3">
                                                                     <label class="col-sm-3 col-form-label">Type
                                                                         d'impression</label>
                                                                     <div class="col-sm-9">
                                                                         <select class="form-select"
-                                                                            aria-label="Default select example">
+                                                                            aria-label="Default select example" v-model="article.typeImpression">
                                                                             <option selected>Impression de fichier pdf
                                                                             </option>
-                                                                            <option value="1">Impression de bâche
+                                                                            <option selected>Impression de bâche
                                                                             </option>
-                                                                            <option value="2">Impression de carte de
+                                                                            <option selected>Impression de carte de
                                                                                 visite</option>
-                                                                            <option value="3">Impression de carte de
+                                                                            <option selected>Impression de carte de
+                                                                                mariage</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row mb-3">
+                                                                    <label
+                                                                        class="col-sm-3 col-form-label">Couleur</label>
+                                                                    <div class="col-sm-9">
+                                                                        <select class="form-select"
+                                                                            aria-label="Default select example" v-model="article.couleur">
+                                                                            <option selected>Blanc noir </option>
+                                                                            <option selected>A Couleur</option>
+                                                                            <option selected>Impression de carte de
+                                                                                visite</option>
+                                                                            <option selected>Impression de carte de
                                                                                 mariage</option>
                                                                         </select>
                                                                     </div>
@@ -129,18 +130,35 @@
                                                                         voulu</label>
                                                                     <div class="col-sm-9">
                                                                         <select class="form-select"
-                                                                            aria-label="Default select example">
+                                                                            aria-label="Default select example" v-model="article.format">
                                                                             <option selected>Format A3</option>
-                                                                            <option value="1">Format A4</option>
-                                                                            <option value="2">Format A...</option>
+                                                                            <option selected>Format A4</option>
+                                                                            <option selected>Format A...</option>
                                                                         </select>
                                                                     </div>
                                                                 </div>
+
+                                    
+
+                                                                <div class="row mb-3">
+                                                                    <label
+                                                                        class="col-sm-3 col-form-label">Type de livraison</label>
+                                                                    <div class="col-sm-9">
+                                                                        <select class="form-select"
+                                                                            aria-label="Default select example" v-model="article.livraison">
+                                                                            <option selected>A livrer à la maison</option>
+                                                                            <option selected>A rétirer au centre d'impression </option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+
+
                                                                 <div class="row mb-3">
                                                                     <label for="inputDate"
                                                                         class="col-sm-3 col-form-label">Délai</label>
                                                                     <div class="col-sm-9">
-                                                                        <input type="date" class="form-control">
+                                                                        <input type="date" class="form-control" v-model="article.delai">
                                                                     </div>
                                                                 </div>
                                                                 <div class="row mb-3">
@@ -149,17 +167,18 @@
                                                                         Exigence</label>
                                                                     <div class="col-sm-9">
                                                                         <textarea class="form-control"
-                                                                            style="height: 100px"></textarea>
+                                                                            style="height: 100px" v-model="article.detail">
+                                                                            </textarea>
                                                                     </div>
                                                                 </div>
-                                                                <fieldset class="row mb-3">
+                                                                <!-- <fieldset class="row mb-3">
                                                                     <legend class="col-form-label col-sm-3 pt-0">
                                                                         Caractère du document</legend>
                                                                     <div class="col-sm-9">
                                                                         <div class="form-check">
                                                                             <input class="form-check-input" type="radio"
                                                                                 name="gridRadios" id="gridRadios1"
-                                                                                value="option1" checked>
+                                                                                value="option1" checked  v-model="article.caractere">
                                                                             <label class="form-check-label"
                                                                                 for="gridRadios1">
                                                                                 Confidentiel
@@ -168,7 +187,7 @@
                                                                         <div class="form-check">
                                                                             <input class="form-check-input" type="radio"
                                                                                 name="gridRadios" id="gridRadios2"
-                                                                                value="option2">
+                                                                                value="option2" checked v-model="article.caractere">
                                                                             <label class="form-check-label"
                                                                                 for="gridRadios2">
                                                                                 Non confidentiel
@@ -177,19 +196,19 @@
                                                                         <div class="form-check disabled">
                                                                             <input class="form-check-input" type="radio"
                                                                                 name="gridRadios" id="gridRadios"
-                                                                                value="option">
+                                                                                value="option" checked v-model="article.caractere">
                                                                             <label class="form-check-label"
                                                                                 for="gridRadios3">
                                                                                 Public
                                                                             </label>
                                                                         </div>
                                                                     </div>
-                                                                </fieldset>
+                                                                </fieldset> -->
 
                                                                 <div class="row mb-3">
 
-                                                                    <button type="submit"
-                                                                        class="btn btn-primary">Envoyer</button>
+                                                                    <button
+                                                                        class="btn btn-primary" @click.prevent="$store.commit('addArticleToCart',article)">Envoyer</button>
 
                                                                 </div>
 
@@ -739,6 +758,25 @@ import FooterView from "@/components/FooterView.vue";
 
 export default {
     name: "DetailView",
+    data () {
+        return {
+            article:{
+                couleur:'',
+                typeImpression:'',
+                format:'',
+                delai:'',
+                detail:'',
+                livraison:'',
+            }
+        }
+
+    },
+    methods: {
+        getArticle(){
+            console.log(this.article);
+        }
+    },
+
     components: {
         NavbarView,
         FooterView,

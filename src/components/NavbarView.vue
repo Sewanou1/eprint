@@ -20,7 +20,7 @@
             <router-link to="/connexion">Se connecter</router-link>            
           </ul>  
           <ul>
-            <router-link to="/panier"><i class="ri-shopping-cart-2-line ri-2x" ></i>(0)</router-link>
+            <router-link to="/panier"><i class="ri-shopping-cart-2-line ri-4x" ></i>(0)</router-link>
           </ul>      
         </nav>
         <!-- .navbar -->

@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="col-lg-6">
-                                        <form action="https://www.tfgbusiness.com/send-email" method="post" class="form-email" enctype="multipart/form-data">
+                      <form action="https://www.tfgbusiness.com/send-email" method="post" class="form-email" enctype="multipart/form-data">
                         <input type="hidden" name="_token" value="JvlWGUbNewVMiShDufYXkAJQOaKwtfJ80lfoHViL">
                         <div class="row gy-4">
 
