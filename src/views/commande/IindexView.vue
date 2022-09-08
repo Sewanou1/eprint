@@ -17,7 +17,7 @@
               <router-link to="/detail">
                 <div class="pic">
                   <img
-                    src="../../assets/img/team/team-1.jpg"
+                    src="../../assets/img/team/b2.jpg"
                     class="img-fluid"
                     alt=""
                   />
@@ -25,7 +25,7 @@
               </router-link>
               <div class="member-info">
                 <a href="/detail">
-                  <h4>ETS Impression</h4>
+                  <h4>ETS Impression 1</h4>
                 </a>
                 <span>Centre d'impression</span>
                 <div class="social">
@@ -42,13 +42,13 @@
             <div class="member" data-aos="zoom-in" data-aos-delay="200">
               <div class="pic">
                 <img
-                  src="../../assets/img/team/team-2.jpg"
+                  src="../../assets/img/team/c3.jpg"
                   class="img-fluid"
                   alt=""
                 />
               </div>
               <div class="member-info">
-                <h4>ETS Impression</h4>
+                <h4>ETS Impression 2</h4>
                 <span>Centre d'impression</span>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
@@ -64,13 +64,13 @@
             <div class="member" data-aos="zoom-in" data-aos-delay="300">
               <div class="pic">
                 <img
-                  src="../../assets/img/team/team-3.jpg"
+                  src="../../assets/img/team/c1.jpg"
                   class="img-fluid"
                   alt=""
                 />
               </div>
               <div class="member-info">
-                <h4>ETS Impression</h4>
+                <h4>ETS Impression 3</h4>
                 <span>Centre d'impression</span>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
@@ -86,13 +86,13 @@
             <div class="member" data-aos="zoom-in" data-aos-delay="400">
               <div class="pic">
                 <img
-                  src="../../assets/img/team/team-4.jpg"
+                  src="../../assets/img/team/c2.png"
                   class="img-fluid"
                   alt=""
                 />
               </div>
               <div class="member-info">
-                <h4>ETS Impression</h4>
+                <h4>ETS Impression 4</h4>
                 <span>Centre d'impression</span>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>

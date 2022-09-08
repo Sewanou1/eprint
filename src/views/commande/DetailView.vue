@@ -51,10 +51,6 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" data-bs-toggle="tab" href="#profile-activity" role="tab"
-                                                aria-selected="false">Article</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-bs-toggle="tab" href="#profile-friends" role="tab"
                                                 aria-selected="false">Catalogue</a>
                                         </li>
                                         <li class="nav-item">
@@ -81,21 +77,12 @@
                                                         <div class="card-body">
                                                             <h5 class="card-title">Commander votre impression</h5>
                                                             <!-- General Form Elements -->
-                                                            <form>
-                                                                <!-- <div class="row mb-3">
-                                                                    <label for="inputNumber"
-                                                                        class="col-sm-3 col-form-label">Document à
-                                                                        imprimer</label>
-                                                                    <div class="col-sm-9">
-                                                                        <input class="form-control" type="file"
-                                                                            id="formFile" >
-                                                                    </div>
-                                                                </div> -->
+                                                            <form @submit.prevent="addFile">
                                                                 <div class="row mb-3">
                                                                     <label class="col-sm-3 col-form-label">Type
                                                                         d'impression</label>
                                                                     <div class="col-sm-9">
-                                                                        <select class="form-select"
+                                                                        <select class="form-select" required
                                                                             aria-label="Default select example" v-model="article.typeImpression">
                                                                             <option selected>Impression de fichier pdf
                                                                             </option>
@@ -110,10 +97,19 @@
                                                                 </div>
 
                                                                 <div class="row mb-3">
+                                                                    <label for="inputNumber"
+                                                                        class="col-sm-3 col-form-label">Document à
+                                                                        imprimer</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input class="form-control" type="file" @change="onChange" required>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row mb-3">
                                                                     <label
                                                                         class="col-sm-3 col-form-label">Couleur</label>
                                                                     <div class="col-sm-9">
-                                                                        <select class="form-select"
+                                                                        <select class="form-select" required
                                                                             aria-label="Default select example" v-model="article.couleur">
                                                                             <option selected>Blanc noir </option>
                                                                             <option selected>A Couleur</option>
@@ -138,9 +134,15 @@
                                                                     </div>
                                                                 </div>
 
-                                    
-
                                                                 <div class="row mb-3">
+                                                                    <label
+                                                                        class="col-sm-3 col-form-label">Quantité</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input class="form-control" type="number" v-model="article.quantite" required>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- <div class="row mb-3">
                                                                     <label
                                                                         class="col-sm-3 col-form-label">Type de livraison</label>
                                                                     <div class="col-sm-9">
@@ -150,66 +152,33 @@
                                                                             <option selected>A rétirer au centre d'impression </option>
                                                                         </select>
                                                                     </div>
+                                                                </div> -->
+
+                                                                <div class="row mb-3">
+                                                                    <label for="inputPassword"
+                                                                        class="col-sm-3 col-form-label">Commentaire</label>
+                                                                    <div class="col-sm-9">
+                                                                        <textarea class="form-control" required
+                                                                            style="height: 100px" v-model="article.commentaire">
+                                                                            </textarea>
+                                                                    </div>
                                                                 </div>
-
-
 
                                                                 <div class="row mb-3">
                                                                     <label for="inputDate"
                                                                         class="col-sm-3 col-form-label">Délai</label>
                                                                     <div class="col-sm-9">
-                                                                        <input type="date" class="form-control" v-model="article.delai">
+                                                                        <input type="date" class="form-control" v-model="article.delai" required>
                                                                     </div>
                                                                 </div>
-                                                                <div class="row mb-3">
-                                                                    <label for="inputPassword"
-                                                                        class="col-sm-3 col-form-label">Détail &&
-                                                                        Exigence</label>
-                                                                    <div class="col-sm-9">
-                                                                        <textarea class="form-control"
-                                                                            style="height: 100px" v-model="article.detail">
-                                                                            </textarea>
-                                                                    </div>
-                                                                </div>
-                                                                <!-- <fieldset class="row mb-3">
-                                                                    <legend class="col-form-label col-sm-3 pt-0">
-                                                                        Caractère du document</legend>
-                                                                    <div class="col-sm-9">
-                                                                        <div class="form-check">
-                                                                            <input class="form-check-input" type="radio"
-                                                                                name="gridRadios" id="gridRadios1"
-                                                                                value="option1" checked  v-model="article.caractere">
-                                                                            <label class="form-check-label"
-                                                                                for="gridRadios1">
-                                                                                Confidentiel
-                                                                            </label>
-                                                                        </div>
-                                                                        <div class="form-check">
-                                                                            <input class="form-check-input" type="radio"
-                                                                                name="gridRadios" id="gridRadios2"
-                                                                                value="option2" checked v-model="article.caractere">
-                                                                            <label class="form-check-label"
-                                                                                for="gridRadios2">
-                                                                                Non confidentiel
-                                                                            </label>
-                                                                        </div>
-                                                                        <div class="form-check disabled">
-                                                                            <input class="form-check-input" type="radio"
-                                                                                name="gridRadios" id="gridRadios"
-                                                                                value="option" checked v-model="article.caractere">
-                                                                            <label class="form-check-label"
-                                                                                for="gridRadios3">
-                                                                                Public
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </fieldset> -->
+
+
+
 
                                                                 <div class="row mb-3">
 
                                                                     <button
-                                                                        class="btn btn-primary" @click.prevent="$store.commit('addArticleToCart',article)">Envoyer</button>
-
+                                                                        class="btn btn-primary" @click.prevent="addArticleToCart">Ajouter au panier</button>
                                                                 </div>
 
                                                             </form><!-- End General Form Elements -->
@@ -595,105 +564,6 @@
                                     </section>
                                 </div>
                             </div>
-                            <div id="profile-friends" class="tab-pane fade">
-                                <div class="card">
-
-                                    <section id="team" class="team">
-                                        <div class="container">
-
-                                            <div class="section-title" data-aos="fade-up">
-                                                <h2>CATALOGUE</h2>
-                                                <p>NOS REALISATIONS</p>
-                                            </div>
-
-                                            <div class="row g-0" data-aos="fade-left">
-
-                                                <div class="col-lg-3 col-md-4">
-                                                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                                                        <a href="../../assets/img/gallery/gallery-1.jpg"
-                                                            class="gallery-lightbox">
-                                                            <img src="../../assets/img/gallery/gallery-1.jpg" alt=""
-                                                                class="img-fluid">
-                                                        </a>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-4">
-                                                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
-                                                        <a href="../../assets/img/gallery/gallery-2.jpg"
-                                                            class="gallery-lightbox">
-                                                            <img src="../../assets/img/gallery/gallery-2.jpg" alt=""
-                                                                class="img-fluid">
-                                                        </a>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-4">
-                                                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                                                        <a href="../../assets/img/gallery/gallery-3.jpg"
-                                                            class="gallery-lightbox">
-                                                            <img src="../../assets/img/gallery/gallery-3.jpg" alt=""
-                                                                class="img-fluid">
-                                                        </a>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-4">
-                                                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250">
-                                                        <a href="../../assets/img/gallery/gallery-4.jpg"
-                                                            class="gallery-lightbox">
-                                                            <img src="../../assets/img/gallery/gallery-4.jpg" alt=""
-                                                                class="img-fluid">
-                                                        </a>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-4">
-                                                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                                                        <a href="../../assets/img/gallery/gallery-5.jpg"
-                                                            class="gallery-lightbox">
-                                                            <img src="../../assets/img/gallery/gallery-5.jpg" alt=""
-                                                                class="img-fluid">
-                                                        </a>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-4">
-                                                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="350">
-                                                        <a href="../../assets/img/gallery/gallery-6.jpg"
-                                                            class="gallery-lightbox">
-                                                            <img src="../../assets/img/gallery/gallery-6.jpg" alt=""
-                                                                class="img-fluid">
-                                                        </a>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-4">
-                                                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                                                        <a href="../../assets/img/gallery/gallery-7.jpg"
-                                                            class="gallery-lightbox">
-                                                            <img src="../../assets/img/gallery/gallery-7.jpg" alt=""
-                                                                class="img-fluid">
-                                                        </a>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-3 col-md-4">
-                                                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="450">
-                                                        <a href="../../assets/img/gallery/gallery-8.jpg"
-                                                            class="gallery-lightbox">
-                                                            <img src="../../assets/img/gallery/gallery-8.jpg" alt=""
-                                                                class="img-fluid">
-                                                        </a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                    </section>
-                                </div>
-                            </div>
                             <div id="profile-profile" class="tab-pane fade">
                                 <div class="card">
                                     <section id="team" class="team">
@@ -742,7 +612,7 @@
 </template>
 
 <script>
-
+import axios from 'axios';
 import {
     MDBModal,
     MDBModalHeader,
@@ -765,15 +635,57 @@ export default {
                 typeImpression:'',
                 format:'',
                 delai:'',
-                detail:'',
+                commentaire:'',
                 livraison:'',
-            }
-        }
+                quantite:'',
+                document:'',
+                
+            },
+            image:null
 
+        };
+         
     },
+
+
+
     methods: {
+
         getArticle(){
             console.log(this.article);
+        },
+
+        onChange(e){
+            console.log('selected file', e.target.files[0])
+            this.image = e.target.files[0];
+        },
+
+         addFile(){
+             this.loading = true
+             const formData= new FormData()
+             formData.append('file', this.file)
+             axios.post('http://localhost:8000/api/uploadFile',
+                 formData, {
+                     headers: {
+                         'content-Type': 'multipart/form-data'
+                     }
+                 }
+             ).then(response => {
+                 console.log(response.data)
+
+             })
+         },
+
+        // submit(){
+        //     let fd = new FormData();
+        //     fd.append('img', this.image)
+        //     axios.post('http://localhost:8000/api/uploadFile', fd).then(res=>{
+        //         console.log("Response", res.data)
+        //     }).catch(err=>console.log(err))
+        // },
+
+        addArticleToCart() {
+            this.$store.commit('addArticleToCart',this.article);
         }
     },
 

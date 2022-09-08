@@ -32,6 +32,9 @@ const routes = [
   {
     path: '/inscription',
     name: 'inscription',
+    meta: {
+      auth: false
+    },
     component: InscriptionView
   },
   {
@@ -61,7 +64,29 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
+
+  scrollBehavior(to, from, savedPosition){
+    //retourner la position desirée
+    if(savedPosition) {
+      return savedPosition
+    }else{
+      if(to.hash) {
+        return {selctor: to.hash}
+      }else {
+        return {x: 0, y: 0}
+      }
+    }
+  }
+})
+
+router.beforeEach((to, from, next)=>{
+  const loggedIn = localStorage.getItem('user')
+  if(to.matched.some(record=>record.meta.auth) && !loggedIn) {
+    next({name: 'connexion'})
+    return
+  }
+  next()
 })
 
 export default router

@@ -9,8 +9,8 @@
                 <h3>E-PRINT</h3>
                 <p class="pb-3">
                   <em
-                    >Une plateforme web qui va permettre à toute structure
-                    d’impression de faire valoir ses services aux personnes qui
+                    >Une plateforme web permettant de faire valoir ses services 
+                    d’impression aux personnes qui
                     sont dans le besoin.</em
                   >
                 </p>

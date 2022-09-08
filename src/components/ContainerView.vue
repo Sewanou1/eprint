@@ -13,11 +13,9 @@
             "
           >
             <div data-aos="zoom-out" data-aos-duration="2000">
-              <h1>Commande ton impression sur <span>E-PRINT</span></h1>
+              <h1>Restez chez vous et commandez votre impression sur  <span>E-PRINT</span>.</h1>
               <h2>
-                Une plateforme web qui va permettre à toute structure
-                d’impression de faire valoir ses services aux personnes qui sont
-                dans le besoin
+                C'est simple,rapide,sécurisé et éfficace
               </h2>
               <div class="text-center text-lg-start">
                 <a href="/commander" class="btn-get-started scrollto"
@@ -51,27 +49,22 @@
               <img src="../assets/img/client.png" class="img-fluid" alt="" />
             </div>
             <div class="col-md-8 pt-4" data-aos="fade-up"  data-aos-duration="2000">
-              <h3>Aimerez vous faire une impression ?.</h3>
+              <h3>Aimerez vous faire une impression ?</h3>
               <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Vous êtes à la recherche d'un bon centre d'impression ? Bah oui, vous êtes au meilleur endroit. Pour y parvenir: 
               </p>
               <ul>
                 <li>
-                  <i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex
-                  ea commodo consequat.
+                  <i class="bi bi-check"></i> Vous pouvez créer un compte afin de passer votre commande.
                 </li>
                 <li>
-                  <i class="bi bi-check"></i> Duis aute irure dolor in
-                  reprehenderit in voluptate velit.
+                  <i class="bi bi-check"></i> Toutefois, vous pouvez de même passer votre commande sans avoir un compte.
                 </li>
                 <li>
-                  <i class="bi bi-check"></i> Iure at voluptas aspernatur
-                  dignissimos doloribus repudiandae.
+                  <i class="bi bi-check"></i> Rendez-vous au niveau de la page des differents centre d'impression et choississez ce qui vous convient en fonction de votre besoin.
                 </li>
                 <li>
-                  <i class="bi bi-check"></i> Est ipsa assumenda id facilis
-                  nesciunt placeat sed doloribus praesentium.
+                  <i class="bi bi-check"></i> Enfin,vous pouvez passser votre commande en toute sécurité.
                 </li>
               </ul>
               <p>
@@ -90,7 +83,7 @@
             </div>
           </div>
 
-          <div class="row content">
+          <!-- <div class="row content">
             <div class="col-md-4 order-1 order-md-2" data-aos="fade-left"  data-aos-duration="2000">
               <img src="../assets/img/imprimeur.png" class="img-fluid" alt="" />
             </div>
@@ -122,7 +115,7 @@
               class="btn-get-started scrollto"
               >Inscrivez-vous maintenant</a
             >
-          </div>
+          </div> -->
         </div>
       </section>
       <!-- End Details Section -->
@@ -151,40 +144,40 @@
             <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
               <div class="icon-box" data-aos="zoom-in" data-aos-delay="150"  data-aos-duration="1500">
                 <i class="ri-calendar-todo-line" style="color: #e80368"></i>
-                <h3><a href="">Impression de carte de visite</a></h3>
+                <h3><a href="">Impression de Calendrier</a></h3>
               </div>
             </div>
             <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
               <div class="icon-box" data-aos="zoom-in" data-aos-delay="200"  data-aos-duration="2000">
                 <i class="ri-paint-brush-line" style="color: #e361ff"></i>
-                <h3><a href="">Impression de carte de mariage</a></h3>
+                <h3><a href="">Impression de carte d'anniversaire</a></h3>
               </div>
             </div>
             <div class="col-lg-3 col-md-4 mt-4">
               <div class="icon-box" data-aos="zoom-in" data-aos-delay="250"  data-aos-duration="3500">
                 <i class="ri-database-2-line" style="color: #47aeff"></i>
-                <h3><a href="">Impression de carte d'anniversaire</a></h3>
+                <h3><a href="">Impression de carte d'invitation</a></h3>
               </div>
             </div>
             <div class="col-lg-3 col-md-4 mt-4">
               <div class="icon-box" data-aos="zoom-in" data-aos-delay="300"  data-aos-duration="3500">
                 <i class="ri-gradienter-line" style="color: #ffa76e"></i>
-                <h3><a href="">Impression de carte d'invitation</a></h3>
+                <h3><a href="">Impression de carte de mariage</a></h3>
               </div>
             </div>
             <div class="col-lg-3 col-md-4 mt-4">
               <div class="icon-box" data-aos="zoom-in" data-aos-delay="350"  data-aos-duration="3500">
                 <i class="ri-file-list-3-line" style="color: #11dbcf"></i>
-                <h3><a href="">Impression de Calendrier </a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="400"  data-aos-duration="4000">
-                <i class="ri-price-tag-2-line" style="color: #4233ff"></i>
                 <h3><a href="">Impression de flyers</a></h3>
               </div>
             </div>
             <div class="col-lg-3 col-md-4 mt-4">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="400"  data-aos-duration="4000">
+                <i class="ri-anchor-line" style="color: #b2904f"></i>
+                <h3><a href="">Autres… </a></h3>
+              </div>
+            </div>
+            <!-- <div class="col-lg-3 col-md-4 mt-4">
               <div class="icon-box" data-aos="zoom-in" data-aos-delay="450"  data-aos-duration="4500">
                 <i class="ri-anchor-line" style="color: #b2904f"></i>
                 <h3><a href=""> Autres… </a></h3>
@@ -207,7 +200,7 @@
                 <i class="ri-fingerprint-line" style="color: #29cc61"></i>
                 <h3><a href="">Flavor Nivelanda</a></h3>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <div class="text-center mt-5">

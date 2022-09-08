@@ -32,8 +32,18 @@
           <div class="col-12">
             <!-- /.card -->
             <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Vos commandes</h3>
+              <div class="card-header row">
+                <div class="col-md-10 " >
+                    <h3 class="card-title">Vos commandes</h3>
+                </div>
+                
+                <div class="col-md-2 " >
+                <button type="submit"  class="btn btn-info btn-sm float-end" @click.prevent="removeArticleFromCart(index.article)">
+                     <i class="fas fa-trash"></i>Vider le Panier
+                </button>
+                </div>
+
+
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -41,7 +51,7 @@
                   <thead>
                   <tr>
                     <th>Commandes</th>
-                    <th>Prix unitaire (XOF)</th>
+                    <th>Commentaire</th>
                     <th>Quantité</th>
                     <th>Actions</th>
                   </tr>
@@ -52,20 +62,11 @@
                         -{{ article.typeImpression }} <br>
                         -{{ article.couleur }} <br>
                         -{{ article.format}} <br>
-                        -{{ article.livraison}} <br>
                     </td>
-                    <td>8</td>
-                    <td> 5
-                        <!-- <div id="app">
-                            <div>
-                                <button v-on:click="augmenterAge">+</button>
-                                <p>{{ age }}</p>
-                                <button v-on:click="dimunierAge">-</button>
-                            </div>
-                        </div> -->
-                    </td>
+                    <td>{{ article.commentaire }}</td>
+                    <td> {{ article.quantite }} </td>
                     <td style="text-align:center; justify-content: space-between;">   
-                        <button type="submit" class="btn btn-danger btn-sm ">
+                        <button type="submit" class="btn btn-danger btn-sm " @click.prevent="removeArticleFromCart(index.article)">
                             <i class="fas fa-trash"></i>Supprimer
                         </button>
 
@@ -92,16 +93,25 @@
                         <input type="hidden" name="_token" value="JvlWGUbNewVMiShDufYXkAJQOaKwtfJ80lfoHViL">
                         <div class="row gy-4">
 
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <input type="text" name="name" id="name" class="form-control" placeholder="Nom" value="">
                             </div>
 
-                            <div class="col-md-6 ">
+                            <div class="col-md-4 ">
                                 <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Prenom" value="">
                             </div>
 
                             <div class="col-md-4 ">
                                 <input type="text" class="form-control" name="telephone" id="telephone" placeholder="Téléphone" value="">
+                            </div>
+
+                            <div class="col-md-4 ">
+                                <select class="form-select"
+                                    aria-label="Default select example" >
+                                    <option selected value=" "></option>
+                                    <option selected>A livrer à la maison</option>
+                                    <option selected>A rétirer au centre d'impression </option>
+                                </select>
                             </div>
 
                             <div class="col-md-4">
@@ -148,8 +158,8 @@
                     <div class="col-2"> <img src="../../../src/assets/images/moov.png" alt="" style="height:80px ; width: 80px;"></div>
                     <div class="col-2"><img src="../../../src/assets/images/mastercard.png" alt="" style="height:80px; width: 80px;"></div>
                     <div class="col-2"><img src="../../../src/assets/images/american.png" alt="" style="height:80px; width: 80px;"></div>
-                    <div class="col-2"><img src="../../../src/assets/images/mtn.jpg" alt="" style="height:80px; width: 80px;"></div>
-                    <div class="col-2"> <img src="../../../src/assets/images/moov.png" alt="" style="height:80px; width: 80px;"></div>
+                    <div class="col-2"><img src="../../../src/assets/images/orange.jpg" alt="" style="height:80px; width: 80px;"></div>
+                    <div class="col-2"> <img src="../../../src/assets/images/visa.png" alt="" style="height:80px; width: 80px;"></div>
 
 
                     
@@ -195,6 +205,12 @@ export default {
   computed : {
     getCart(){
         return this.$store.state.cart;
+    }
+  },
+
+  methods : {
+    removeArticleFromCart(article){
+        this.$store.dispatch('removeArticleFromCart',article);
     }
   }
 };

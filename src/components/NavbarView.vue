@@ -15,12 +15,15 @@
             <router-link to="/suivi">Suivi</router-link>
             <router-link to="/contact">Contact</router-link> 
          </ul>
-        <ul class="auth ml-2">
+        <ul class="auth ml-2" v-if="this.$store.getters.isLogged">
+            <button mode="flat"  @click="logout">Logout</button>           
+        </ul> 
+          <ul class="auth ml-2" v-if="!this.$store.getters.isLogged">
             <router-link to="/inscription">S'inscrire</router-link> 
-            <router-link to="/connexion">Se connecter</router-link>            
+            <router-link to="/connexion">Se connecter</router-link> 
           </ul>  
           <ul>
-            <router-link to="/panier"><i class="ri-shopping-cart-2-line ri-4x" ></i>(0)</router-link>
+            <router-link to="/panier"><i class="ri-shopping-cart-2-line ri-4x" > </i>({{ cartItemCount }})</router-link>
           </ul>      
         </nav>
         <!-- .navbar -->
@@ -34,6 +37,18 @@
 export default {
   name: "NavbarView",
 
+  computed: {
+    cartItemCount(){
+      return this.$store.getters.cartItemCount;
+    },
+
+  },
+
+  methods: {
+    logout(){
+          this.$store.dispatch('logout')
+    }
+  }
 };
 </script>
 

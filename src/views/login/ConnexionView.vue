@@ -8,7 +8,7 @@
               <div class="d-flex justify-content-center py-4">
             <router-link to="/"  class="logo d-flex align-items-center w-auto " style="text-decoration: none">           
                   <img src="" alt="">
-                  <span class=""  style="color: rgba(1, 4, 136, 1); font-size:28px;font-weight: 700; ">E-PRINT</span>
+                  <span class=""  style="color: white; font-size:28px;font-weight: 700; ">E-PRINT</span>
             </router-link> 
               </div><!-- End Logo -->
 
@@ -33,11 +33,8 @@
                             autocomplete="current-password" v-model="InfoUsers.password">
                     </div>
                     <div class="col-12">
-                        <div class="icheck-primary">
-                            <input class="form-check-input" type="checkbox" required>
-                            <label class="form-check-label" for="remember">
-                                Se souvenir de moi
-                            </label>
+                        <div class="icheck-primary ">
+                              <a href="" style="text-decoration:none" class="float-end  mb-4">Mot de passe oublié?</a>
                         </div>
                     </div>
 
@@ -63,7 +60,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 
     export default {
         name : "ConnexionView",
@@ -78,22 +75,48 @@ import axios from 'axios'
     },
 
         methods: {
-          submitUser(){
-            axios.post('http://localhost:8000/api/connexion',this.InfoUsers)      
-            .then(response => (
-              localStorage.setItem('token', response.data),
-              this.$router.push('commander' )
-            ))
+          // submitUser(){
+          //   axios.post('http://localhost:8000/api/connexion',this.InfoUsers)      
+          //   .then(response => (
+          //     localStorage.setItem('token', response.data),
+          //     this.$router.push('commander' )
+          //   ))
             
-            .catch( error => {
-              console.log("ERRRR::", error.response.data)
-              alert('Donnée(s) incorrecte(s) !!')
-            })
+          //   .catch( error => {
+          //     console.log("ERRRR::", error.response.data)
+          //     alert('Donnée(s) incorrecte(s) !!')
+          //   })
 
-          }
+          // },
+
+        submitUser(){
+          this.$store.dispatch('login', this.InfoUsers)
+                .then(response => (
+               
+               this.$router.push('commander' )
+             ))
+            
+             .catch( error => {
+             
+               alert('Donnée(s) incorrecte(s) !!')
+             })
+        }
+
     }
         
     }
 
 
 </script>
+
+<style lang="scss" scoped>
+  .hello {
+  background: url("../../assets/img/imp2.jpg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.342);
+  background-blend-mode: multiply;
+
+  }
+</style>
