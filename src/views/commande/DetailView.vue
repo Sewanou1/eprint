@@ -101,7 +101,7 @@
                                                                         class="col-sm-3 col-form-label">Document à
                                                                         imprimer</label>
                                                                     <div class="col-sm-9">
-                                                                        <input class="form-control" type="file" @change="onChange" required>
+                                                                        <input class="form-control" ref="file" type="file" @change="onChange" name="file" required>
                                                                     </div>
                                                                 </div>
 
@@ -142,18 +142,6 @@
                                                                     </div>
                                                                 </div>
 
-                                                                <!-- <div class="row mb-3">
-                                                                    <label
-                                                                        class="col-sm-3 col-form-label">Type de livraison</label>
-                                                                    <div class="col-sm-9">
-                                                                        <select class="form-select"
-                                                                            aria-label="Default select example" v-model="article.livraison">
-                                                                            <option selected>A livrer à la maison</option>
-                                                                            <option selected>A rétirer au centre d'impression </option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div> -->
-
                                                                 <div class="row mb-3">
                                                                     <label for="inputPassword"
                                                                         class="col-sm-3 col-form-label">Commentaire</label>
@@ -171,10 +159,6 @@
                                                                         <input type="date" class="form-control" v-model="article.delai" required>
                                                                     </div>
                                                                 </div>
-
-
-
-
                                                                 <div class="row mb-3">
 
                                                                     <button
@@ -637,11 +621,9 @@ export default {
                 delai:'',
                 commentaire:'',
                 livraison:'',
-                quantite:'',
-                document:'',
-                
+                quantite:'',                
             },
-            image:null
+            file:null
 
         };
          
@@ -657,32 +639,34 @@ export default {
 
         onChange(e){
             console.log('selected file', e.target.files[0])
-            this.image = e.target.files[0];
+            this.file = e.target.files[0];
         },
 
-         addFile(){
-             this.loading = true
-             const formData= new FormData()
-             formData.append('file', this.file)
-             axios.post('http://localhost:8000/api/uploadFile',
-                 formData, {
+          addFile(){
+            //   this.loading = true
+              let formData= new FormData()
+              formData.append('file', this.file)
+              axios.post('http://localhost:8000/api/uploadFile',
+                  formData,{
                      headers: {
-                         'content-Type': 'multipart/form-data'
+                         'Content-Type': 'multipart/form-data'
                      }
-                 }
-             ).then(response => {
-                 console.log(response.data)
+                  }
+              ).then(function(){
+                 console.log('SUCCESS!!');
+             }).catch(function(){
+             console.log('FAILURE!!');
+             });
+          },
 
-             })
-         },
-
-        // submit(){
-        //     let fd = new FormData();
-        //     fd.append('img', this.image)
-        //     axios.post('http://localhost:8000/api/uploadFile', fd).then(res=>{
-        //         console.log("Response", res.data)
-        //     }).catch(err=>console.log(err))
-        // },
+        //  addFile(){
+        //      let fd = new FormData();
+        //      fd.append('file', this.file)
+        //      axios.post('http://localhost:8000/api/uploadFile', fd)
+        //      .then(res=>{
+        //          console.log("Response", res.data)
+        //      }).catch(err=>console.log(err))
+        //  },
 
         addArticleToCart() {
             this.$store.commit('addArticleToCart',this.article);
@@ -712,14 +696,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/*!
-* Version: 1.2.0
-* Template: Hope-Ui - Responsive Bootstrap 5 Admin Dashboard Template
-* Author: iqonic.design
-* Design and Developed by: iqonic.design
-* NOTE: This file contains the styling for Template.
-*
-*/
 @import"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap";
 
 :focus {

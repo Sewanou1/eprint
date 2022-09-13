@@ -92,12 +92,12 @@
         submitUser(){
           this.$store.dispatch('login', this.InfoUsers)
                 .then(response => (
-               
+                  console.log(response), 
                this.$router.push('commander' )
              ))
             
              .catch( error => {
-             
+             console.log("ERRRR::", error.response),
                alert('Donnée(s) incorrecte(s) !!')
              })
         }

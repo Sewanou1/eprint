@@ -67,11 +67,7 @@
                   <i class="bi bi-check"></i> Enfin,vous pouvez passser votre commande en toute sécurité.
                 </li>
               </ul>
-              <p>
-                Voluptas nisi in quia excepturi nihil voluptas nam et ut.
-                Expedita omnis eum consequatur non. Sed in asperiores aut
-                repellendus. Error quisquam ab maiores. Quibusdam sit in officia
-              </p>
+
             </div>
 
             <div class="text-center mt-5 text">

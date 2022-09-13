@@ -16,7 +16,7 @@
             <router-link to="/contact">Contact</router-link> 
          </ul>
         <ul class="auth ml-2" v-if="this.$store.getters.isLogged">
-            <button mode="flat"  @click="logout">Logout</button>           
+            <button mode="flat" class="mr-2"  @click="logout" style="background-color:rgba(1, 4, 136, 1);color: rgba(255, 255, 255, 0.7);border: none;font-family: Poppins;">Logout</button>           
         </ul> 
           <ul class="auth ml-2" v-if="!this.$store.getters.isLogged">
             <router-link to="/inscription">S'inscrire</router-link> 

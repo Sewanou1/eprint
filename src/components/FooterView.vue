@@ -37,21 +37,22 @@
               <h4>Liens utiles</h4>
               <ul>
                 <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#">Home</a>
+                  <router-link to="/">Accueil</router-link>
                 </li>
                 <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#">About us</a>
+                  <router-link  to="/commander">Commander</router-link>
                 </li>
                 <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#">Services</a>
+                  <router-link to="/suivi">Suivi</router-link>
                 </li>
                 <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Terms of service</a>
+                  <router-link to="/contact">Contact</router-link> 
                 </li>
                 <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Privacy policy</a>
+                  <router-link to="/inscription">Inscription</router-link> 
+                </li>
+                <li>
+                  <router-link to="/connexion">Connexion</router-link> 
                 </li>
               </ul>
             </div>
