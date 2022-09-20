@@ -5,183 +5,186 @@
 
     <div class="hello container">
         <div>
-        <div class="wrapper">
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>DataTables</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">DataTables</li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <!-- /.card -->
-            <div class="card">
-              <div class="card-header row">
-                <div class="col-md-10 " >
-                    <h3 class="card-title">Vos commandes</h3>
-                </div>
-                
-                <div class="col-md-2 " >
-                <button type="submit"  class="btn btn-info btn-sm float-end" @click.prevent="removeArticleFromCart(index.article)">
-                     <i class="fas fa-trash"></i>Vider le Panier
-                </button>
-                </div>
-
-
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
-                  <thead>
-                  <tr>
-                    <th>Commandes</th>
-                    <th>Commentaire</th>
-                    <th>Quantité</th>
-                    <th>Actions</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                <tr v-for="(article,index) in getCart" :key="index">
-                    <td>
-                        -{{ article.typeImpression }} <br>
-                        -{{ article.couleur }} <br>
-                        -{{ article.format}} <br>
-                    </td>
-                    <td>{{ article.commentaire }}</td>
-                    <td> {{ article.quantite }} </td>
-                    <td style="text-align:center; justify-content: space-between;">   
-                        <button type="submit" class="btn btn-danger btn-sm " @click.prevent="removeArticleFromCart(index.article)">
-                            <i class="fas fa-trash"></i>Supprimer
-                        </button>
-
-                        <!-- <button type="submit" class="btn btn-info btn-sm ">
-                            <i class="fas fa-trash"></i>Consulter
-                        </button> -->
-                    </td>
-                  </tr>
-
-                  </tbody>
-                  <tfoot>
-                  <!-- <tr>
-                    <th colspan="5" >   
-                        <button type="submit" class="btn btn-success  float-end">
-                            <i class="fas fa-trash"></i>Demandez devis
-                        </button>
-                    </th>
-
-                  </tr> -->
-                  </tfoot>
-                </table>
-                <div class="row mt-5">
-                    <div class="col-lg-8">
-                        <input type="hidden" name="_token" value="JvlWGUbNewVMiShDufYXkAJQOaKwtfJ80lfoHViL">
-                        <div class="row gy-4">
-
-                            <div class="col-md-4">
-                                <input type="text" name="name" id="name" class="form-control" placeholder="Nom" value="">
+            <div class="wrapper">
+                <!-- Content Wrapper. Contains page content -->
+                <div class="content-wrapper">
+                    <!-- Content Header (Page header) -->
+                    <section class="content-header">
+                        <div class="container-fluid">
+                            <div class="row mb-2">
+                                <div class="col-sm-6">
+                                    <h1>DataTables</h1>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ol class="breadcrumb float-sm-right">
+                                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                        <li class="breadcrumb-item active">DataTables</li>
+                                    </ol>
+                                </div>
                             </div>
+                        </div><!-- /.container-fluid -->
+                    </section>
 
-                            <div class="col-md-4 ">
-                                <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Prenom" value="">
+                    <!-- Main content -->
+                    <section class="content">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12">
+                                    <!-- /.card -->
+                                    <div class="card">
+                                        <div class="card-header row">
+                                            <div class="col-md-10 ">
+                                                <h3 class="card-title">Vos commandes</h3>
+                                            </div>
+
+                                            <div class="col-md-2 ">
+                                                <button type="submit" class="btn btn-info btn-sm float-end"
+                                                    @click.prevent="removeArticleFromCart(index.article)">
+                                                    <i class="fas fa-trash"></i>Vider le Panier
+                                                </button>
+                                            </div>
+
+
+                                        </div>
+                                        <!-- /.card-header -->
+                                        <div class="card-body">
+                                            <table id="example1" class="table table-bordered table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Commandes</th>
+                                                        <th>Commentaire</th>
+                                                        <th>Quantité</th>
+                                                        <th>Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr v-for="(article,index) in getCart" :key="index">
+                                                        <td>
+                                                            -{{ article.typeImpression }} <br>
+                                                            -{{ article.couleur }} <br>
+                                                            -{{ article.format}} <br>
+                                                        </td>
+                                                        <td>{{ article.commentaire }}</td>
+                                                        <td> {{ article.quantite }} </td>
+                                                        <td style="text-align:center; justify-content: space-between;">
+                                                            <button class="btn btn-danger btn-sm "
+                                                                @click.prevent="removeArticleFromCart(index.article)">
+                                                                <i class="fas fa-trash"></i>Supprimer
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+
+                                                </tbody>
+                                                <tfoot>
+                                                </tfoot>
+                                            </table>
+                                            <form>
+                                                <div class="row mt-5">
+                                                    <div class="col-lg-8">
+                                                        <input type="hidden" name="_token"
+                                                            value="JvlWGUbNewVMiShDufYXkAJQOaKwtfJ80lfoHViL">
+                                                        <div class="row gy-4">
+
+                                                            <div class="col-md-4">
+                                                                <input type="text" name="name" id="name"
+                                                                    class="form-control" placeholder="Nom" value="">
+                                                            </div>
+
+                                                            <div class="col-md-4 ">
+                                                                <input type="text" class="form-control" name="prenom"
+                                                                    id="prenom" placeholder="Prenom" value="">
+                                                            </div>
+
+                                                            <div class="col-md-4 ">
+                                                                <input type="text" class="form-control" name="telephone"
+                                                                    id="telephone" placeholder="Téléphone" value="">
+                                                            </div>
+
+                                                            <div class="col-md-4 ">
+                                                                <select class="form-select"
+                                                                    aria-label="Default select example">
+                                                                    <option selected value=" "></option>
+                                                                    <option selected>A livrer à la maison</option>
+                                                                    <option selected>A rétirer au centre d'impression
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="col-md-4">
+                                                                <input type="text" name="name" id="name"
+                                                                    class="form-control" placeholder="Adresse" value="">
+                                                            </div>
+
+
+                                                            <div class="col-md-4 ">
+                                                                <input type="email" class="form-control" name="email"
+                                                                    id="email" placeholder="Adresse Mail" value="">
+                                                            </div>
+
+
+
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-4">
+                                                        <div class="row">
+                                                            <div class="col-md-6 ">
+
+                                                            </div>
+                                                            <div class="col-md-6 ">
+                                                                <button class="btn btn-warning form-control float-end "
+                                                                    @click.prevent="GetQuote">
+                                                                    <i class="fas fa-trash"></i>Demandez devis
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-4">
+                                                            <div class="col-md-6 ">
+                                                            </div>
+                                                            <div class="col-md-6 home">
+                                                                <button type="submit"
+                                                                    class="btn btn-success form-control float-end"
+                                                                    @click="open">
+                                                                    <i class="fas fa-trash"></i>Commandez <i
+                                                                        class="ri-shopping-cart-2-line"> </i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <hr>
+                                            <h5 class="mb-5">Les moyens de paiements disponibles</h5>
+                                            <div class="row">
+                                                <div class="col-2"><img src="../../../src/assets/images/mtn.jpg" alt=""
+                                                        style="height:80px; width: 80px;"></div>
+                                                <div class="col-2"> <img src="../../../src/assets/images/moov.png"
+                                                        alt="" style="height:80px ; width: 80px;"></div>
+                                                <div class="col-2"><img src="../../../src/assets/images/mastercard.png"
+                                                        alt="" style="height:80px; width: 80px;"></div>
+                                                <div class="col-2"><img src="../../../src/assets/images/american.png"
+                                                        alt="" style="height:80px; width: 80px;"></div>
+                                                <div class="col-2"><img src="../../../src/assets/images/orange.jpg"
+                                                        alt="" style="height:80px; width: 80px;"></div>
+                                                <div class="col-2"> <img src="../../../src/assets/images/visa.png"
+                                                        alt="" style="height:80px; width: 80px;"></div>
+                                            </div>
+                                        </div>
+                                        <!-- /.card-body -->
+                                    </div>
+                                    <!-- /.card -->
+                                </div>
+                                <!-- /.col -->
                             </div>
-
-                            <div class="col-md-4 ">
-                                <input type="text" class="form-control" name="telephone" id="telephone" placeholder="Téléphone" value="">
-                            </div>
-
-                            <div class="col-md-4 ">
-                                <select class="form-select"
-                                    aria-label="Default select example" >
-                                    <option selected value=" "></option>
-                                    <option selected>A livrer à la maison</option>
-                                    <option selected>A rétirer au centre d'impression </option>
-                                </select>
-                            </div>
-
-                            <div class="col-md-4">
-                                <input type="text" name="name" id="name" class="form-control" placeholder="Adresse" value="">
-                            </div>
-
-
-                            <div class="col-md-4 ">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Adresse Mail" value="">
-                            </div>
-
-
-
-      
+                            <!-- /.row -->
                         </div>
+                        <!-- /.container-fluid -->
+                    </section>
+                    <!-- /.content -->
                 </div>
-
-                <div class="col-lg-4">
-                     <div class="row">
-                        <div class="col-md-6 " >
-
-                        </div>
-                        <div class="col-md-6 " >
-                           <button type="submit" class="btn btn-warning form-control float-end " >
-                            <i class="fas fa-trash"></i>Demandez devis
-                            </button>
-                        </div>
-                     </div>
-                       <div class="row mt-4">
-                        <div class="col-md-6 " >
-                        </div>
-                        <div class="col-md-6">
-                         <button type="submit" class="btn btn-success form-control float-end" >
-                            <i class="fas fa-trash"></i>Commandez <i class="ri-shopping-cart-2-line" >   </i>
-                        </button>
-                        </div>
-                       </div>
-                </div>
-                </div>
-                <hr>
-                <h5 class="mb-5">Les moyens de paiements disponibles</h5>
-                <div class="row">
-                    <div class="col-2"><img src="../../../src/assets/images/mtn.jpg" alt="" style="height:80px; width: 80px;"></div>
-                    <div class="col-2"> <img src="../../../src/assets/images/moov.png" alt="" style="height:80px ; width: 80px;"></div>
-                    <div class="col-2"><img src="../../../src/assets/images/mastercard.png" alt="" style="height:80px; width: 80px;"></div>
-                    <div class="col-2"><img src="../../../src/assets/images/american.png" alt="" style="height:80px; width: 80px;"></div>
-                    <div class="col-2"><img src="../../../src/assets/images/orange.jpg" alt="" style="height:80px; width: 80px;"></div>
-                    <div class="col-2"> <img src="../../../src/assets/images/visa.png" alt="" style="height:80px; width: 80px;"></div>
-
-
-                    
-                   
-                    
-                    
-                </div>
-              </div>
-              <!-- /.card-body -->
+                <!-- /.content-wrapper -->
             </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
-        </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-</div>
         </div>
     </div>
 
@@ -192,33 +195,79 @@
 
 <script>
 // import "../../app"
+import axios from "axios";
 import NavbarView from "@/components/NavbarView.vue";
 import FooterView from "@/components/FooterView.vue";
-
+import {
+  openKkiapayWidget,
+  addKkiapayListener,
+  removeKkiapayListener,
+} from "kkiapay";
 export default {
-  name: "PanierView",
-  components: {
-    NavbarView,
-    FooterView,
-  },
+    name: "PanierView",
+    components: {
+        NavbarView,
+        FooterView,
+    },
+    data() {
+        return {
+            articlesCart: {
+                t: this.$store.state.cart[0].typeImpression,
+                q: this.$store.state.cart[0].quantite
+            }
+        }
+    },
 
-  computed : {
-    getCart(){
-        return this.$store.state.cart;
-    }
-  },
+    computed: {
+        getCart() {
+            return this.$store.state.cart;
+        }
+    },
 
-  methods : {
-    removeArticleFromCart(article){
-        this.$store.dispatch('removeArticleFromCart',article);
-    }
-  }
+    methods: {
+        removeArticleFromCart(article) {
+            this.$store.dispatch('removeArticleFromCart', article);
+        },
+
+        GetQuote() {
+            axios.post('http://127.0.0.1:8000/api/GetDevis', this.articlesCart)
+                .then(res => {
+                    console.log(this.articlesCart)
+                    console.log("Response", res)
+                    alert(res.data.devis)
+                }).catch(err => console.log(err))
+        },
+        
+        open() {
+        openKkiapayWidget({
+            amount: 4000,
+            api_key: "6aa5a030a84211ecb9755de712bc9e4f",
+            sandbox: true,
+            phone: "97000000",
+        });
+        },
+
+        successHandler(response) {
+            console.log(response);
+        },
+
+        OrderNow() {
+
+        }
+    },
+
+    mounted() {
+        addKkiapayListener('success',this.successHandler)
+    },
+
+    beforeUnmount() {
+      removeKkiapayListener('success',this.successHandler)
+    },
 };
 
 </script>
 
 <style scoped lang="scss">
-
 .wrapper,
 body,
 html {

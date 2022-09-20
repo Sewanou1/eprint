@@ -228,44 +228,7 @@
                                                             <form>
                                                                 <div class="row mb-3">
                                                                     <label for="inputNumber"
-                                                                        class="col-sm-3 col-form-label">Document à
-                                                                        imprimer</label>
-                                                                    <div class="col-sm-9">
-                                                                        <input class="form-control" type="file"
-                                                                            id="formFile">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row mb-3">
-                                                                    <label
-                                                                        class="col-sm-3 col-form-label">Couleur</label>
-                                                                    <div class="col-sm-9">
-                                                                        <select class="form-select"
-                                                                            aria-label="Default select example">
-                                                                            <option selected>Blanc noir </option>
-                                                                            <option value="1">A Couleur</option>
-                                                                            <option value="2">Impression de carte de
-                                                                                visite</option>
-                                                                            <option value="3">Impression de carte de
-                                                                                mariage</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row mb-3">
-                                                                    <label class="col-sm-3 col-form-label">Type
-                                                                        d'impression</label>
-                                                                    <div class="col-sm-9">
-                                                                        <select class="form-select"
-                                                                            aria-label="Default select example">
-                                                                            <option selected>Impression de fichier pdf
-                                                                            </option>
-                                                                            <option value="1">Impression de bâche
-                                                                            </option>
-                                                                            <option value="2">Impression de carte de
-                                                                                visite</option>
-                                                                            <option value="3">Impression de carte de
-                                                                                mariage</option>
-                                                                        </select>
-                                                                    </div>
+                                                                        class="col-sm-12 col-form-label"> Voulez vous commander un tel article ?</label>
                                                                 </div>
                                                             </form>
                                                         </MDBModalBody>
@@ -273,7 +236,7 @@
                                                             <MDBBtn color="secondary"
                                                                 @click="exampleModalScrollable = false"> Annuler
                                                             </MDBBtn>
-                                                            <MDBBtn color="primary"> Ajouter au panier </MDBBtn>
+                                                            <MDBBtn color="primary"> Oui </MDBBtn>
                                                         </MDBModalFooter>
                                                     </MDBModal>
                                                 </div>
@@ -316,44 +279,7 @@
                                                             <form>
                                                                 <div class="row mb-3">
                                                                     <label for="inputNumber"
-                                                                        class="col-sm-3 col-form-label">Document à
-                                                                        imprimer</label>
-                                                                    <div class="col-sm-9">
-                                                                        <input class="form-control" type="file"
-                                                                            id="formFile">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row mb-3">
-                                                                    <label
-                                                                        class="col-sm-3 col-form-label">Couleur</label>
-                                                                    <div class="col-sm-9">
-                                                                        <select class="form-select"
-                                                                            aria-label="Default select example">
-                                                                            <option selected>Blanc noir </option>
-                                                                            <option value="1">A Couleur</option>
-                                                                            <option value="2">Impression de carte de
-                                                                                visite</option>
-                                                                            <option value="3">Impression de carte de
-                                                                                mariage</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row mb-3">
-                                                                    <label class="col-sm-3 col-form-label">Type
-                                                                        d'impression</label>
-                                                                    <div class="col-sm-9">
-                                                                        <select class="form-select"
-                                                                            aria-label="Default select example">
-                                                                            <option selected>Impression de fichier pdf
-                                                                            </option>
-                                                                            <option value="1">Impression de bâche
-                                                                            </option>
-                                                                            <option value="2">Impression de carte de
-                                                                                visite</option>
-                                                                            <option value="3">Impression de carte de
-                                                                                mariage</option>
-                                                                        </select>
-                                                                    </div>
+                                                                        class="col-sm-12 col-form-label"> Voulez vous commander un tel article ?</label>
                                                                 </div>
                                                             </form>
                                                         </MDBModalBody>
@@ -400,48 +326,11 @@
                                                             <MDBModalTitle id="exampleModalScrollableTitle"> Commander
                                                                 votre Impression </MDBModalTitle>
                                                         </MDBModalHeader>
-                                                        <MDBModalBody>
+                                                        <MDBModalBody> 
                                                             <form>
                                                                 <div class="row mb-3">
                                                                     <label for="inputNumber"
-                                                                        class="col-sm-3 col-form-label">Document à
-                                                                        imprimer</label>
-                                                                    <div class="col-sm-9">
-                                                                        <input class="form-control" type="file"
-                                                                            id="formFile">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row mb-3">
-                                                                    <label
-                                                                        class="col-sm-3 col-form-label">Couleur</label>
-                                                                    <div class="col-sm-9">
-                                                                        <select class="form-select"
-                                                                            aria-label="Default select example">
-                                                                            <option selected>Blanc noir </option>
-                                                                            <option value="1">A Couleur</option>
-                                                                            <option value="2">Impression de carte de
-                                                                                visite</option>
-                                                                            <option value="3">Impression de carte de
-                                                                                mariage</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row mb-3">
-                                                                    <label class="col-sm-3 col-form-label">Type
-                                                                        d'impression</label>
-                                                                    <div class="col-sm-9">
-                                                                        <select class="form-select"
-                                                                            aria-label="Default select example">
-                                                                            <option selected>Impression de fichier pdf
-                                                                            </option>
-                                                                            <option value="1">Impression de bâche
-                                                                            </option>
-                                                                            <option value="2">Impression de carte de
-                                                                                visite</option>
-                                                                            <option value="3">Impression de carte de
-                                                                                mariage</option>
-                                                                        </select>
-                                                                    </div>
+                                                                        class="col-sm-12 col-form-label"> Voulez vous commander un tel article ?</label>
                                                                 </div>
                                                             </form>
                                                         </MDBModalBody>
@@ -492,44 +381,7 @@
                                                             <form>
                                                                 <div class="row mb-3">
                                                                     <label for="inputNumber"
-                                                                        class="col-sm-3 col-form-label">Document à
-                                                                        imprimer</label>
-                                                                    <div class="col-sm-9">
-                                                                        <input class="form-control" type="file"
-                                                                            id="formFile">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row mb-3">
-                                                                    <label
-                                                                        class="col-sm-3 col-form-label">Couleur</label>
-                                                                    <div class="col-sm-9">
-                                                                        <select class="form-select"
-                                                                            aria-label="Default select example">
-                                                                            <option selected>Blanc noir </option>
-                                                                            <option value="1">A Couleur</option>
-                                                                            <option value="2">Impression de carte de
-                                                                                visite</option>
-                                                                            <option value="3">Impression de carte de
-                                                                                mariage</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row mb-3">
-                                                                    <label class="col-sm-3 col-form-label">Type
-                                                                        d'impression</label>
-                                                                    <div class="col-sm-9">
-                                                                        <select class="form-select"
-                                                                            aria-label="Default select example">
-                                                                            <option selected>Impression de fichier pdf
-                                                                            </option>
-                                                                            <option value="1">Impression de bâche
-                                                                            </option>
-                                                                            <option value="2">Impression de carte de
-                                                                                visite</option>
-                                                                            <option value="3">Impression de carte de
-                                                                                mariage</option>
-                                                                        </select>
-                                                                    </div>
+                                                                        class="col-sm-12 col-form-label"> Voulez vous commander un tel article ?</label>
                                                                 </div>
                                                             </form>
                                                         </MDBModalBody>
@@ -670,6 +522,7 @@ export default {
 
         addArticleToCart() {
             this.$store.commit('addArticleToCart',this.article);
+            this.article={};
         }
     },
 

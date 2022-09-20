@@ -405,8 +405,7 @@
           <div
             id="carouselExampleFade"
             class="carousel slide carousel-fade"
-            data-bs-ride="carousel"
-          >
+            data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="swiper-slide">
@@ -516,7 +515,7 @@
                   data-bs-toggle="collapse"
                   class="collapse"
                   data-bs-target="#faq-list-1"
-                  >Non consectetur a erat nam at lectus urna duis?
+                  >C'est quoi E-print?
                   <i class="bx bx-chevron-down icon-show"></i
                   ><i class="bx bx-chevron-up icon-close"></i
                 ></a>
@@ -526,10 +525,7 @@
                   data-bs-parent=".faq-list"
                 >
                   <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id
-                    volutpat lacus laoreet non curabitur gravida. Venenatis
-                    lectus magna fringilla urna porttitor rhoncus dolor purus
-                    non.
+                    E-print est une plateforme d'impression en ligne
                   </p>
                 </div>
               </li>
@@ -540,7 +536,7 @@
                   data-bs-toggle="collapse"
                   data-bs-target="#faq-list-2"
                   class="collapsed"
-                  >Feugiat scelerisque varius morbi enim nunc?
+                  >Comment vous gérer les livraisons?
                   <i class="bx bx-chevron-down icon-show"></i
                   ><i class="bx bx-chevron-up icon-close"></i
                 ></a>
@@ -550,11 +546,7 @@
                   data-bs-parent=".faq-list"
                 >
                   <p>
-                    Dolor sit amet consectetur adipiscing elit pellentesque
-                    habitant morbi. Id interdum velit laoreet id donec ultrices.
-                    Fringilla phasellus faucibus scelerisque eleifend donec
-                    pretium. Est pellentesque elit ullamcorper dignissim. Mauris
-                    ultrices eros in cursus turpis massa tincidunt dui.
+                    La livraison, il existe de deux sortes. Vous pouvez vous faire livrer à domicile ou soit passé chercher votre commande au centre d'impression. En passant votre commande, il suffit de mentionner ce qui vous convient. 
                   </p>
                 </div>
               </li>
@@ -565,7 +557,7 @@
                   data-bs-toggle="collapse"
                   data-bs-target="#faq-list-3"
                   class="collapsed"
-                  >Dolor sit amet consectetur adipiscing elit?
+                  >Comment s'éffectue le paiement des commande sur E-prent?
                   <i class="bx bx-chevron-down icon-show"></i
                   ><i class="bx bx-chevron-up icon-close"></i
                 ></a>
@@ -575,12 +567,7 @@
                   data-bs-parent=".faq-list"
                 >
                   <p>
-                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices
-                    sagittis orci. Faucibus pulvinar elementum integer enim. Sem
-                    nulla pharetra diam sit amet nisl suscipit. Rutrum tellus
-                    pellentesque eu tincidunt. Lectus urna duis convallis
-                    convallis tellus. Urna molestie at elementum eu facilisis
-                    sed odio morbi quis
+                    Les modules de paiements sont integrés au plateforme. Ces derniers permettent facilement de payer sa commande en ligne.
                   </p>
                 </div>
               </li>
@@ -591,8 +578,7 @@
                   data-bs-toggle="collapse"
                   data-bs-target="#faq-list-4"
                   class="collapsed"
-                  >Tempus quam pellentesque nec nam aliquam sem et tortor
-                  consequat? <i class="bx bx-chevron-down icon-show"></i
+                  >Les services de E-print sont-il limité ? <i class="bx bx-chevron-down icon-show"></i
                   ><i class="bx bx-chevron-up icon-close"></i
                 ></a>
                 <div
@@ -601,10 +587,7 @@
                   data-bs-parent=".faq-list"
                 >
                   <p>
-                    Molestie a iaculis at erat pellentesque adipiscing commodo.
-                    Dignissim suspendisse in est ante in. Nunc vel risus commodo
-                    viverra maecenas accumsan. Sit amet nisl suscipit adipiscing
-                    bibendum est. Purus gravida quis blandit turpis cursus in.
+                    Oui, les service sont limité. Cette première version sera mise en application seulement dans une seule ville. 
                   </p>
                 </div>
               </li>
@@ -618,13 +601,12 @@
                   >Tortor vitae purus faucibus ornare. Varius vel pharetra vel
                   turpis nunc eget lorem dolor?
                   <i class="bx bx-chevron-down icon-show"></i
-                  ><i class="bx bx-chevron-up icon-close"></i
-                ></a>
+                  ><i class="bx bx-chevron-up icon-close"></i>
+                </a>
                 <div
                   id="faq-list-5"
                   class="collapse"
-                  data-bs-parent=".faq-list"
-                >
+                  data-bs-parent=".faq-list">
                   <p>
                     Laoreet sit amet cursus sit amet dictum sit amet justo.
                     Mauris vitae ultricies leo integer malesuada nunc vel.
