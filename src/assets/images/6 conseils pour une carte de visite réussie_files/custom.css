@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+
+/*!
+custom.css
+*/
+.cms .blok p strong,
+.cms .blok p b,
+.cms .blok p em,
+.cms .blok p {
+    font-size: 1em ;
+}
+.cms ul {
+    margin-left: 30px;
+}
+.cms ul li {
+    display: list-item;
+	list-style-type: none !important;
+    text-align: -webkit-match-parent;
+	font-family: "open sans" !important;
+}
+.cms ul li strong {
+    font-family: "open sans" !important;
+}
+.cms ol li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+	font-family: "open sans" !important;
+}
+.sercives-desc ul li {
+    display: list-item;
+	list-style-type: square;
+    text-align: -webkit-match-parent;
+	font-family: "open sans" !important;
+}
+
+.sercives-desc ol li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+	font-family: "open sans" !important;
+}

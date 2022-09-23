@@ -127,9 +127,10 @@
                                                                     <div class="col-sm-9">
                                                                         <select class="form-select"
                                                                             aria-label="Default select example" v-model="article.format">
-                                                                            <option selected>Format A3</option>
-                                                                            <option selected>Format A4</option>
-                                                                            <option selected>Format A...</option>
+                                                                            <option selected>A3</option>
+                                                                            <option selected>A4</option>
+                                                                            <option selected>A5</option>
+                                                                            <option selected>longueur=15cm largeur=10cm</option>
                                                                         </select>
                                                                     </div>
                                                                 </div>

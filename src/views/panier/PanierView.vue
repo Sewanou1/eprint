@@ -209,14 +209,6 @@ export default {
         NavbarView,
         FooterView,
     },
-    data() {
-        return {
-            articlesCart: {
-                t: this.$store.state.cart[0].typeImpression,
-                q: this.$store.state.cart[0].quantite
-            }
-        }
-    },
 
     computed: {
         getCart() {
@@ -230,9 +222,9 @@ export default {
         },
 
         GetQuote() {
-            axios.post('http://127.0.0.1:8000/api/GetDevis', this.articlesCart)
+            axios.post('http://127.0.0.1:8000/api/GetDevis', this.$store.state.cart)
                 .then(res => {
-                    console.log(this.articlesCart)
+                    console.log(this.$store.state.cart)
                     console.log("Response", res)
                     alert(res.data.devis)
                 }).catch(err => console.log(err))
