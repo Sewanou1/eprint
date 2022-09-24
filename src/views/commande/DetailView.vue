@@ -154,13 +154,6 @@
                                                                 </div>
 
                                                                 <div class="row mb-3">
-                                                                    <label for="inputDate"
-                                                                        class="col-sm-3 col-form-label">Délai</label>
-                                                                    <div class="col-sm-9">
-                                                                        <input type="date" class="form-control" v-model="article.delai" required>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row mb-3">
 
                                                                     <button
                                                                         class="btn btn-primary" @click.prevent="addArticleToCart">Ajouter au panier</button>
@@ -471,10 +464,9 @@ export default {
                 couleur:'',
                 typeImpression:'',
                 format:'',
-                delai:'',
                 commentaire:'',
-                livraison:'',
-                quantite:'',                
+                quantite:'',
+                document_imprimer: ''               
             },
             file:null
 
@@ -522,8 +514,14 @@ export default {
         //  },
 
         addArticleToCart() {
-            this.$store.commit('addArticleToCart',this.article);
-            this.article={};
+            let fd = new FormData();
+            fd.append('file', this.file)
+            axios.post('http://localhost:8000/api/uploadFile', fd)
+            .then(res => {
+                this.article.document_imprimer = res.data.path
+                this.$store.commit('addArticleToCart',this.article);
+                this.article={};
+            }).catch(err => console.log(err))
         }
     },
 

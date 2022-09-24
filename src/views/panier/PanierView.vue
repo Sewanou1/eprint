@@ -78,7 +78,7 @@
                                                 <tfoot>
                                                 </tfoot>
                                             </table>
-                                            <form>
+                                            <form @submit.prevent="OrderNow">
                                                 <div class="row mt-5">
                                                     <div class="col-lg-8">
                                                         <input type="hidden" name="_token"
@@ -86,43 +86,45 @@
                                                         <div class="row gy-4">
 
                                                             <div class="col-md-4">
-                                                                <input type="text" name="name" id="name"
-                                                                    class="form-control" placeholder="Nom" value="">
+                                                                <input type="text" name="nom" id="nom"
+                                                                    class="form-control" placeholder="Nom"  v-model="commande.nom">
                                                             </div>
 
                                                             <div class="col-md-4 ">
                                                                 <input type="text" class="form-control" name="prenom"
-                                                                    id="prenom" placeholder="Prenom" value="">
+                                                                    id="prenom" placeholder="Prenom"  v-model="commande.prenom">
                                                             </div>
 
                                                             <div class="col-md-4 ">
                                                                 <input type="text" class="form-control" name="telephone"
-                                                                    id="telephone" placeholder="Téléphone" value="">
+                                                                    id="telephone" placeholder="Téléphone"  v-model="commande.telephone">
                                                             </div>
 
                                                             <div class="col-md-4 ">
                                                                 <select class="form-select"
-                                                                    aria-label="Default select example">
-                                                                    <option selected value=" "></option>
-                                                                    <option selected>A livrer à la maison</option>
-                                                                    <option selected>A rétirer au centre d'impression
+                                                                    aria-label="Default select example" v-model="commande.type_livraison">
+                                                                    <option selected></option>
+                                                                    <option value="A livrer à la maison ">A livrer à la maison</option>
+                                                                    <option  value="A rétirer au centre d'impression">A rétirer au centre d'impression
                                                                     </option>
                                                                 </select>
                                                             </div>
 
                                                             <div class="col-md-4">
-                                                                <input type="text" name="name" id="name"
-                                                                    class="form-control" placeholder="Adresse" value="">
+                                                                <input type="date" name="delais" id="delais"
+                                                                    class="form-control" placeholder="delais"  v-model="commande.delais">
+                                                            </div>
+
+                                                            <div class="col-md-4">
+                                                                <input type="text" name="adresse" id="adresse"
+                                                                    class="form-control" placeholder="Adresse"  v-model="commande.adresse">
                                                             </div>
 
 
                                                             <div class="col-md-4 ">
                                                                 <input type="email" class="form-control" name="email"
-                                                                    id="email" placeholder="Adresse Mail" value="">
+                                                                    id="email" placeholder="Adresse Mail" v-model="commande.email">
                                                             </div>
-
-
-
 
                                                         </div>
                                                     </div>
@@ -145,7 +147,7 @@
                                                             <div class="col-md-6 home">
                                                                 <button type="submit"
                                                                     class="btn btn-success form-control float-end"
-                                                                    @click="open">
+                                                                    >
                                                                     <i class="fas fa-trash"></i>Commandez <i
                                                                         class="ri-shopping-cart-2-line"> </i>
                                                                 </button>
@@ -200,11 +202,31 @@ import NavbarView from "@/components/NavbarView.vue";
 import FooterView from "@/components/FooterView.vue";
 import {
   openKkiapayWidget,
-  addKkiapayListener,
+//   addKkiapayListener,
   removeKkiapayListener,
 } from "kkiapay";
 export default {
     name: "PanierView",
+
+    data () {
+        return {
+            commande:{
+                nom:'',
+                prenom:'',
+                telephone:'',
+                type_livraison:'',
+                delais:'',
+                adresse:'',
+                email:'',
+                montant:'', 
+                nombre_article: this.$store.state.cart.length,
+                articles_commande: this.$store.state.cart,              
+            },
+            file:null
+
+        };
+         
+    },
     components: {
         NavbarView,
         FooterView,
@@ -224,8 +246,8 @@ export default {
         GetQuote() {
             axios.post('http://127.0.0.1:8000/api/GetDevis', this.$store.state.cart)
                 .then(res => {
-                    console.log(this.$store.state.cart)
                     console.log("Response", res)
+                    this.commande.montant=res.data.devis
                     alert(res.data.devis)
                 }).catch(err => console.log(err))
         },
@@ -244,12 +266,21 @@ export default {
         },
 
         OrderNow() {
-
+            axios.post('http://127.0.0.1:8000/api/commander', this.commande)
+                .then(res => {
+                    console.log(res)
+                    this.$store.state.cart = {};
+                    this.commande = {};
+                }).catch(err => console.log(err))
         }
     },
 
     mounted() {
-        addKkiapayListener('success',this.successHandler)
+        axios.post('http://127.0.0.1:8000/api/GetDevis', this.$store.state.cart)
+        .then(res => {
+            this.commande.montant=res.data.devis
+        }).catch(err => console.log(err))
+        // addKkiapayListener('success',this.successHandler);
     },
 
     beforeUnmount() {
