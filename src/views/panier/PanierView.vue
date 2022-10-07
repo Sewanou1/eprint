@@ -63,6 +63,7 @@
                                                             -{{ article.typeImpression }} <br>
                                                             -{{ article.couleur }} <br>
                                                             -{{ article.format}} <br>
+                                                            -{{ article.support}} <br>
                                                         </td>
                                                         <td>{{ article.commentaire }}</td>
                                                         <td> {{ article.quantite }} </td>
@@ -250,6 +251,7 @@ export default {
                     this.commande.montant=res.data.devis
                     alert(res.data.devis)
                 }).catch(err => console.log(err))
+           
         },
         
         open() {
@@ -271,7 +273,14 @@ export default {
                     console.log(res)
                     this.$store.state.cart = {};
                     this.commande = {};
-                }).catch(err => console.log(err))
+                    alert('Commande effectuée avec succès !!!');
+                }).catch(err => {
+                    console.log(err)
+                    if(this.$store.state.cart.length==0){
+                        alert('Le panier est vide')
+                    }else
+                    alert('Veillez renseigner les champs du formulaire !');
+                } )
         }
     },
 

@@ -1,0 +1,6 @@
+function track_googletagmanager(data) {
+    $.each(data,function(i,v) {
+        dataLayer.push(v);
+    });
+    return true;
+}

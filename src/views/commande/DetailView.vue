@@ -134,6 +134,18 @@
                                                                         </select>
                                                                     </div>
                                                                 </div>
+                                                                <div class="row mb-3">
+                                                                    <label class="col-sm-3 col-form-label">Support
+                                                                        Impression</label>
+                                                                    <div class="col-sm-9">
+                                                                        <select class="form-select"
+                                                                            aria-label="Default select example" v-model="article.support">
+                                                                            <option selected>Carton</option>
+                                                                            <option selected>papier A4</option>
+                                                                            <option selected>Une bâche</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
 
                                                                 <div class="row mb-3">
                                                                     <label
@@ -464,6 +476,7 @@ export default {
                 couleur:'',
                 typeImpression:'',
                 format:'',
+                support:'',
                 commentaire:'',
                 quantite:'',
                 document_imprimer: ''               

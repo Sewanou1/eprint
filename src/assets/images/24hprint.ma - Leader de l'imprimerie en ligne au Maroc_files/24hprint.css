@@ -1,0 +1,65 @@
+.navbar-nav .nav-item.submenu_custom_link .nav-link::after {display:none;}
+.navbar-collapse .navbar-nav .dropdown-item {white-space:normal;}
+.navbar-collapse .dropdown-menu > .row {flex-wrap:nowrap}
+.navbar-collapse .dropdown-menu > .row img {max-width:100%; height:auto;}
+.navbar-collapse .navbar-nav .nav-item .dropdown-menu li a {font-size:0.85rem; padding-top:0.3rem; padding-bottom:0.3rem;}
+#product_images {position:static !important;}
+.btn-img-text {align-items:center;}
+#top-banner .carousel-item, #top-banner .banner {min-height:auto;}
+.btn-title-text.upload_design a .h4, .btn-title-text.upload_design a i, .btn-title-text.browse_design a .h4, .btn-title-text.browse_design a i {color:#ffffff !important;}
+.navbar-expand-md .navbar-collapse .navbar-nav .nav-item .dropdown-menu .card .nav li a {font-size:0.85rem; padding: .1rem 1rem;}
+/*.navbar-expand-md .navbar-collapse .navbar-nav .nav-item.active > .nav-link, .navbar-expand-md .navbar-collapse .navbar-nav .nav-item.show > .nav-link {
+  color: #f66 !important;
+}*/
+.top-header .btn-link .fa-lg {font-size:2em;}
+
+.top-links li a {font-size:0.85rem;}
+#login_sidebar .card-body .dropdown-item-text {position:relative;}
+#login_sidebar .card-body .dropdown-item-text::after {bottom:-8px;}
+#templatelist {margin-bottom:3rem !important;}
+#templatelist .page-sub-header h2 {
+  font-family: "montserratblack",sans-serif; font-weight:normal;
+}
+#templatelist .page-sub-header a:hover, #templatelist .page-sub-header a:focus {
+  background: #3e3e3e;
+  border-color: #3e3e3e;
+}
+#templatelist .nav-customtabs {flex-wrap:nowrap;}
+#templatelist .nav-customtabs .nav-link {padding: .5rem 1rem; font-size: 0.8rem;}
+.promotion_products_slider {display:none;}
+.promotion_products_slider.slick-initialized {display:block;}
+.promotion_products_slider .slick-track {display:flex;}
+
+.prducts-tab .product-box .card-body h3 {font-size:0.7rem;}
+#footersubscribe_sidebar .custom-control-label a {color:#ffffff;}
+.price_calculator .slick-track .slick-slide .custom-control, #products_additional_options .slick-track .slick-slide .custom-control {padding:0;}
+#shopping-cart .ordercontinue .btn-info {
+  background: #ffe22c;
+  border-color: #ffe22c;
+  color: #333;
+}
+#shopping-cart .ordercontinue .btn-info:hover, 
+#shopping-cart .ordercontinue .btn-info:focus, 
+#shopping-cart .ordercontinue .btn-info:not(:disabled):not(.disabled):active, 
+#shopping-cart .ordercontinue .btn-info:not(:disabled):not(.disabled).active, 
+#shopping-cart .ordercontinue .btn-info:not(:disabled):not(.disabled):active:focus {
+  background: #f8d600;
+  border-color: #f8d600;
+  color: #333;
+}
+#payment_method .card .card-header:before {display:none;}
+#cart_pricetotal > p.border-top {padding-bottom:1rem;}
+@media only screen and (min-width: 800px) {
+    .slick-slide > div {
+      margin: 0 .3rem;
+    }
+}
+@media only screen and (min-width: 1500px) {
+.navbar-expand-md .navbar-collapse .navbar-nav .nav-item .nav-link {
+  padding: 1rem 0.8rem;
+}
+}
+@media only screen and (max-width: 767px) {
+.navbar-brand img {max-width:100px;}
+#index .video-responsive iframe {height:300px !important;}
+}

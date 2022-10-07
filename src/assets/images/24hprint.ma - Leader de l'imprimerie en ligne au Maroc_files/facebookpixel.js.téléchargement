@@ -1,0 +1,8 @@
+function track_facebookpixel(data) {
+    if(data.trackCustom) {
+        fbq('trackCustom', data.event, data.fbpjson);
+    } else {
+        fbq('track', data.event, data.fbpjson);
+    }
+    return true;
+}
