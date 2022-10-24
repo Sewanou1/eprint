@@ -15,7 +15,7 @@
             <div data-aos="zoom-out" data-aos-duration="2000">
               <h1>Restez chez vous et commandez votre impression sur  <span>E-PRINT</span>.</h1>
               <h2>
-                C'est simple,rapide,sécurisé et éfficace
+                C'est simple, rapide, sécurisé et éfficace
               </h2>
               <div class="text-center text-lg-start">
                 <a href="/commander" class="btn-get-started scrollto"
@@ -200,7 +200,7 @@
           </div>
 
           <div class="text-center mt-5">
-            <a href="#about" class="btn-get-started scrollto"
+            <a href="/commander" class="btn-get-started scrollto"
               >Commander maintenant</a
             >
           </div>
@@ -234,7 +234,7 @@
                   data-purecounter-duration="1"
                   class="purecounter"
                 ></span>
-                <p>Imprimeurs disponible</p>
+                <p>Centres Impression</p>
               </div>
             </div>
 
@@ -621,6 +621,57 @@
         </div>
       </section>
       <!-- End F.A.Q Section -->
+
+          <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Avis</h2>
+          <p>Donnez votre avis</p>
+        </div>
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
+                    <div class="row">
+                      <div class="col-md-9 form-group">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Nom" required>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-md-9 form-group mt-3 mt-md-0">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Prenom(s)" required>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-md-9 form-group mt-3 mt-md-0">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-md-9 form-group mt-3 mt-md-0">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Téléphone" required>
+                      </div>
+                    </div>
+                </div>  
+
+                <div class="form-group col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                  <textarea class="form-control" name="message" rows="8" placeholder="Votre avis" required></textarea>
+                </div>              
+              </div>
+
+              <div class="text-center mt-5 div-Avis" >
+                <button type="submit" class="btn btn-info sendAvis">Envoyer votre avis</button>
+              </div>
+            </form>
+
+          
+          
+
+        
+
+      </div>
+    </section><!-- End Contact Section -->
     </main>
   </div>
 </template>
@@ -2009,6 +2060,11 @@ h6 {
 }
 .contact .form-email button[type="submit"]:hover {
   background: #5969f3;
+}
+
+
+.sendAvis{
+  border-radius: 20px;
 }
 @-webkit-keyframes animate-loading {
   0% {

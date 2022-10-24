@@ -6,6 +6,23 @@
         <section style="font-family: 'Open Sans', 'sans-serif';"  class="mt-5">
             <div class="container">
                 <div class="swiper-slide">
+                  <PopupView v-if="popupTriggers.buttonTrigger" 
+                    :TogglePopup="()=>TogglePopup('buttonTrigger')">
+                      <div class="popup-body">
+                          <h2 class="en-tete mb-4">Votre commande est :</h2>
+                            <p class="paragraphe">
+                            <span class="span-suivi">{{ this.suivi }}</span>
+                          </p>
+                    </div>
+                  </PopupView>
+
+                  <PopupView v-if="popupTriggers.timedTrigger" 
+                                :TogglePopup="()=>TogglePopup('timedTrigger')">
+                            <h2>My Timed popup</h2>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae totam pariatur alias, accusamus repellat eaque assumenda tempore excepturi accusantium porro, voluptatibus facere qui doloremque repellendus! Odio, vero! Esse, delectus perferendis!
+                            </p>
+                    </PopupView>
                     <div class="col-lg-12 ">
                         <div class="" >
                             <h1 class="section-title "  style="color: rgba(1, 4, 136, 1); font-size:28px;font-weight: 700; margin-top:25px"><span >E-PRINT</span> suivi</h1>
@@ -21,11 +38,11 @@
                                 <i class="bi bi-search text-body"></i>
                             </div>
                             <div class="col">
-                                <input type="hidden" name="tracking_source" id="" value="" />
-                                <input placeholder="Saisissez le numéro de suivi" name="tracking_number" id="tracking-number" value="" type="search" autocomplete="off" maxlength="100" class="form-control form-control-lg form-control-borderless" style="border: none" />
+                                <!-- <input type="hidden" name="tracking_source" id="" value="" /> -->
+                                <input placeholder="Saisissez le numéro de suivi" name="tracking_number" id="tracking-number" type="search" autocomplete="off" maxlength="100" class="form-control form-control-lg form-control-borderless" style="border: none" v-model="commande.ref"/>
                             </div>
                             <div class="col-auto">
-                                <button id="tracking-button" style="background-color:rgba(1, 4, 136, 1);height:50px;color:white;width:100px;border-radius:5px" type="submit" onclick="return trackParcel()">Suivre</button>
+                                <button id="tracking-button" style="background-color:rgba(1, 4, 136, 1);height:50px;color:white;width:100px;border-radius:5px" type="submit" @click.prevent="tracked();TogglePopup('buttonTrigger');">Suivre</button>
                             </div>
                         </div>
                     </form>
@@ -40,13 +57,59 @@
 </template>
 
 <script>
+import axios from 'axios';
 import NavbarView from '@/components/NavbarView.vue'
 import FooterView from '@/components/FooterView.vue'
+import PopupView from '@/components/PopupView.vue';
+import { ref } from 'vue';
 export default {
     name : "SuiviView",
+    setup () {
+        const popupTriggers= ref({
+            buttonTrigger:false,
+            timedTrigger:false
+        });
+
+        const TogglePopup = (trigger)=> {
+            popupTriggers.value[trigger]= !popupTriggers.value[trigger]
+        }
+
+        return {
+           PopupView ,
+           popupTriggers,
+           TogglePopup
+        }
+        
+        
+
+    },
+
+    data () {
+        return {
+            commande:{
+                ref:'',             
+            },
+            suivi:''
+
+        };
+         
+    },
+
+    methods :{
+      tracked() {
+        axios.post('http://127.0.0.1:8000/api/suivi', this.commande)
+                .then(res => {
+                    console.log("Response", res)
+                    this.suivi=res.data.etatcomm;
+                    // alert(res.data.etatcomm)
+                }).catch(err => console.log(err))
+      }
+    },
+
     components : {
         NavbarView,
-        FooterView
+        FooterView,
+        PopupView
     }
 }
 </script>
@@ -65,6 +128,23 @@ export default {
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+}
+
+.span-suivi{
+  font-size: 30px;
+}
+
+.popup-body{
+    justify-content: center;
+    padding: 20px;
+}
+
+.en-tete{
+    text-align: center;
+}
+
+.paragraphe{
+    text-align: center;
 }
 
 a {

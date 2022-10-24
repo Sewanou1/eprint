@@ -105,7 +105,7 @@
                                                                     </div>
                                                                 </div>
 
-                                                                <div class="row mb-3">
+                                                                <!-- <div class="row mb-3">
                                                                     <label
                                                                         class="col-sm-3 col-form-label">Couleur</label>
                                                                     <div class="col-sm-9">
@@ -119,7 +119,7 @@
                                                                                 mariage</option>
                                                                         </select>
                                                                     </div>
-                                                                </div>
+                                                                </div> -->
 
                                                                 <div class="row mb-3">
                                                                     <label class="col-sm-3 col-form-label">Format
@@ -200,7 +200,8 @@
                                                     <MDBModal class="modal fade" id="exampleModalLong" tabindex="-1"
                                                         labelledby="exampleModalLongTitle" v-model="exampleModalLong">
                                                         <MDBModalHeader>
-                                                            <MDBModalTitle id="exampleModalLongTitle"> Commander votre impression
+                                                            <MDBModalTitle id="exampleModalLongTitle"> 
+                                                                <!-- Commander votre impression -->paiement
                                                             </MDBModalTitle>
                                                         </MDBModalHeader>
                                                         <MDBModalBody> ... long body </MDBModalBody>
@@ -227,8 +228,10 @@
                                                         labelledby="exampleModalScrollableTitle"
                                                         v-model="exampleModalScrollable" scrollable>
                                                         <MDBModalHeader>
-                                                            <MDBModalTitle id="exampleModalScrollableTitle"> Commander
-                                                                votre Impression </MDBModalTitle>
+                                                            <MDBModalTitle id="exampleModalScrollableTitle">
+                                                                 <!-- Commander votre Impression  -->
+                                                                 
+                                                                </MDBModalTitle>
                                                         </MDBModalHeader>
                                                         <MDBModalBody>
                                                             <form>
@@ -242,12 +245,12 @@
                                                             <MDBBtn color="secondary"
                                                                 @click="exampleModalScrollable = false"> Annuler
                                                             </MDBBtn>
-                                                            <MDBBtn color="primary"> Oui </MDBBtn>
+                                                            <MDBBtn color="primary"> Ajouter au panier </MDBBtn>
                                                         </MDBModalFooter>
                                                     </MDBModal>
                                                 </div>
 
-                                                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                                                 <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
                                                     <MDBModal class="modal fade" id="exampleModalLong" tabindex="-1"
                                                         labelledby="exampleModalLongTitle" v-model="exampleModalLong">
                                                         <MDBModalHeader>
@@ -398,7 +401,7 @@
                                                             <MDBBtn color="primary"> Ajouter au panier </MDBBtn>
                                                         </MDBModalFooter>
                                                     </MDBModal>
-                                                </div>
+                                                </div> 
 
                                             </div>
 
@@ -473,18 +476,15 @@ export default {
     data () {
         return {
             article:{
-                couleur:'',
                 typeImpression:'',
                 format:'',
                 support:'',
                 commentaire:'',
                 quantite:'',
-                document_imprimer: ''               
+                document_imprimer: ''
             },
             file:null
-
-        };
-         
+        };        
     },
 
 

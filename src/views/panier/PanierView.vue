@@ -2,7 +2,7 @@
     <div class="navbar">
         <NavbarView />
     </div>
-
+ 
     <div class="hello container">
         <div>
             <div class="wrapper">
@@ -22,8 +22,36 @@
                                     </ol>
                                 </div>
                             </div>
-                        </div><!-- /.container-fluid -->
+                        </div>  
                     </section>
+                    <PopupView v-if="popupTriggers.buttonTrigger" 
+                                :TogglePopup="()=>TogglePopup('buttonTrigger')">
+                        <div class="popup-body">
+                            <h2 class="en-tete mb-4">Le devis de votre panier :</h2>
+                                <p class="paragraphe">
+                                   <span>{{ this.valeur_devi }} FCFA</span>
+                                </p>
+                        </div>
+                    </PopupView>
+
+                    <PopupComView v-if="popupTriggerss.buttonTrigger" 
+                                :TogglePopups="()=>TogglePopups('buttonTrigger')">
+                        <div class="popup-body">
+                            <h2 class="en-tete mb-4">Sauvegarde de la commande :</h2>
+                                <p class="paragraphe">
+                                   <span>{{ this.commandez }}</span>
+                                </p>
+                        </div>
+                    </PopupComView>
+
+                    <!-- <PopupView v-if="popupTriggers.timedTrigger" 
+                                :TogglePopup="()=>TogglePopup('timedTrigger')">
+                            <h2>My Timed popup</h2>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae totam pariatur alias, accusamus repellat eaque assumenda tempore excepturi accusantium porro, voluptatibus facere qui doloremque repellendus! Odio, vero! Esse, delectus perferendis!
+                            </p>
+                    </PopupView> -->
+                    
 
                     <!-- Main content -->
                     <section class="content">
@@ -61,9 +89,9 @@
                                                     <tr v-for="(article,index) in getCart" :key="index">
                                                         <td>
                                                             -{{ article.typeImpression }} <br>
-                                                            -{{ article.couleur }} <br>
                                                             -{{ article.format}} <br>
                                                             -{{ article.support}} <br>
+                                                            -{{ article.document_imprimer}} <br>
                                                         </td>
                                                         <td>{{ article.commentaire }}</td>
                                                         <td> {{ article.quantite }} </td>
@@ -79,13 +107,12 @@
                                                 <tfoot>
                                                 </tfoot>
                                             </table>
-                                            <form @submit.prevent="OrderNow">
+                                            <form @submit.prevent="OrderNow();TogglePopups('buttonTrigger');">
                                                 <div class="row mt-5">
                                                     <div class="col-lg-8">
                                                         <input type="hidden" name="_token"
                                                             value="JvlWGUbNewVMiShDufYXkAJQOaKwtfJ80lfoHViL">
                                                         <div class="row gy-4">
-
                                                             <div class="col-md-4">
                                                                 <input type="text" name="nom" id="nom"
                                                                     class="form-control" placeholder="Nom"  v-model="commande.nom">
@@ -129,15 +156,13 @@
 
                                                         </div>
                                                     </div>
-
                                                     <div class="col-lg-4">
                                                         <div class="row">
                                                             <div class="col-md-6 ">
-
                                                             </div>
                                                             <div class="col-md-6 ">
                                                                 <button class="btn btn-warning form-control float-end "
-                                                                    @click.prevent="GetQuote">
+                                                                    @click.prevent="GetQuote();TogglePopup('buttonTrigger');">
                                                                     <i class="fas fa-trash"></i>Demandez devis
                                                                 </button>
                                                             </div>
@@ -201,6 +226,9 @@
 import axios from "axios";
 import NavbarView from "@/components/NavbarView.vue";
 import FooterView from "@/components/FooterView.vue";
+import PopupView from "@/components/PopupView.vue";
+import PopupComView from "@/components/PopupComView.vue";
+import { ref } from 'vue';
 import {
   openKkiapayWidget,
 //   addKkiapayListener,
@@ -208,6 +236,43 @@ import {
 } from "kkiapay";
 export default {
     name: "PanierView",
+
+    setup () {
+        const popupTriggers= ref({
+            buttonTrigger:false,
+            timedTrigger:false
+        });
+
+        const popupTriggerss= ref({
+            buttonTrigger:false,
+            timedTrigger:false
+        });
+
+        const TogglePopup = (trigger)=> {
+            popupTriggers.value[trigger]= !popupTriggers.value[trigger]
+        }
+        /***************************************/
+        const TogglePopups = (trigger)=> {
+            popupTriggerss.value[trigger]= !popupTriggerss.value[trigger]
+        }
+
+//ici le popup apres le nombre de minute fixé quand on charge la page et il s'agit du timde popup 
+       /* setTimeout(()=> {
+            popupTriggers.value.timedTrigger= true;
+        }, 3000) */
+
+        return {
+           PopupView ,
+           PopupComView,
+           popupTriggers,
+           popupTriggerss,
+           TogglePopup,
+           TogglePopups
+        }
+        
+        
+
+    },
 
     data () {
         return {
@@ -223,15 +288,20 @@ export default {
                 nombre_article: this.$store.state.cart.length,
                 articles_commande: this.$store.state.cart,              
             },
-            file:null
+            file:null,
+            valeur_devi:'',
+            commandez:''
+
 
         };
          
     },
     components: {
-        NavbarView,
-        FooterView,
-    },
+    NavbarView,
+    FooterView,
+    PopupView,
+    PopupComView
+},
 
     computed: {
         getCart() {
@@ -249,9 +319,14 @@ export default {
                 .then(res => {
                     console.log("Response", res)
                     this.commande.montant=res.data.devis
-                    alert(res.data.devis)
+                    this.valeur_devi= res.data.devis
+                    // alert(res.data.devis)
                 }).catch(err => console.log(err))
            
+        },
+
+        value(){
+            return 
         },
         
         open() {
@@ -273,13 +348,13 @@ export default {
                     console.log(res)
                     this.$store.state.cart = {};
                     this.commande = {};
-                    alert('Commande effectuée avec succès !!!');
+                    this.commandez="Succès !!!"
                 }).catch(err => {
                     console.log(err)
                     if(this.$store.state.cart.length==0){
-                        alert('Le panier est vide')
+                        this.commandez="Le panier est vide"
                     }else
-                    alert('Veillez renseigner les champs du formulaire !');
+                    this.commandez="Veillez bien renseigner les champs du formulaire !!!"
                 } )
         }
     },
@@ -304,6 +379,23 @@ export default {
 body,
 html {
     min-height: 100%
+}
+
+span{
+    font-size: 20px;
+}
+
+.popup-body{
+    justify-content: center;
+    padding: 20px;
+}
+
+.en-tete{
+    text-align: center;
+}
+
+.paragraphe{
+    text-align: center;
 }
 
 .wrapper {

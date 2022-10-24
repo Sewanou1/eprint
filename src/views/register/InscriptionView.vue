@@ -169,7 +169,7 @@
         axios.post('http://localhost:8000/api/inscription',this.InfoUsers)    
         .then(response => (
           console.log(response),
-         alert('inscription effectuée avec succès !!!')
+         alert('Inscription effectuée avec succès !!!')
         ))
         .catch( error => {
           console.log("ERRRR::", error.response.data)
