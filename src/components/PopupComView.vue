@@ -5,13 +5,56 @@
             <button class="popup-close btn btn-secondary " @click="TogglePopups()">
                 Fermer
             </button>
+            <button class="popup-close btn btn-secondary " @click="open" >
+                Payer{{ this.orders }}
+            </button>
         </div>
     </div>
 </template>
 
 <script>
+import {
+  openKkiapayWidget,
+  addKkiapayListener,
+  removeKkiapayListener,
+} from "kkiapay";
     export default{
-        props: ['TogglePopups']
+        props: ['TogglePopups', 'the_order'],
+
+        // data() {
+        //     return {
+        //         orders: this.the_order
+        //     }
+        // },
+
+        methods: {
+            open() {
+                console.log(this.the_order)
+            openKkiapayWidget({
+                amount: this.the_order.montant_total,
+                api_key: "6aa5a030a84211ecb9755de712bc9e4f",
+                sandbox: true,
+                phone: "97000000",
+                firstname: this.the_order.prenom,
+                lastname: this.the_order.nom,
+                email: this.the_order.email
+            });
+            },
+
+            successHandler(response) {
+            console.log(response.transactionId);
+                
+            },
+
+
+            beforeDestroy() {
+                removeKkiapayListener('success',this.successHandler)
+            },
+        },
+
+        mounted() {
+            addKkiapayListener('success',this.successHandler)
+        },
     }
 </script>
 
@@ -35,7 +78,7 @@
             border-radius:20px;
 
             .popup-close{
-                transform: translate(270%,0);
+                // transform: translate(270%,0);
                 border-radius:10px ;
                 border: none;
             }

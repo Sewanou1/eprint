@@ -222,6 +222,7 @@
                   class="purecounter"
                 ></span>
                 <p>Clients enregistrés</p>
+                <p>{{ this.client }}</p>
               </div>
             </div>
 
@@ -235,6 +236,7 @@
                   class="purecounter"
                 ></span>
                 <p>Centres Impression</p>
+                <p>{{ this.centreImpression }}</p>
               </div>
             </div>
 
@@ -248,6 +250,7 @@
                   class="purecounter"
                 ></span>
                 <p>Equipe</p>
+                <p>2</p>
               </div>
             </div>
           </div>
@@ -266,12 +269,12 @@
           <div class="row g-0" data-aos="fade-left">
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item" data-aos="zoom-in"  data-aos-duration="2000">
-                <a href="../assets/img/gallery/gallery-1.jpg" data-glightbox="title: Your title; description: description here; descPosition: left; type: image; effect: fade; width: 900px; height: auto; zoomable: true; draggable: true;"
+                <a href="../assets/img/gallery/bache.jpg" data-glightbox="title: Your title; description: description here; descPosition: left; type: image; effect: fade; width: 900px; height: auto; zoomable: true; draggable: true;"
                   
                   class="gallery-lightbox"
                 >
                   <img
-                    src="../assets/img/gallery/gallery-1.jpg"
+                    src="../assets/img/gallery/bache.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -282,11 +285,11 @@
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item" data-aos="zoom-in"  data-aos-duration="2000">
                 <a
-                  href="../assets/img/gallery/gallery-2.jpg"
+                  href="../assets/img/gallery/invitation.jpg"
                   class="gallery-lightbox"
                 >
                   <img
-                    src="../assets/img/gallery/gallery-2.jpg"
+                    src="../assets/img/gallery/invitation.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -297,11 +300,11 @@
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item" data-aos="zoom-in" data-aos-duration="2000">
                 <a
-                  href="../assets/img/gallery/gallery-3.jpg"
+                  href="../assets/img/gallery/téléchargement.jpg"
                   class="gallery-lightbox"
                 >
                   <img
-                    src="../assets/img/gallery/gallery-3.jpg"
+                    src="../assets/img/gallery/téléchargement.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -312,11 +315,11 @@
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item" data-aos="zoom-in" data-aos-duration="2500">
                 <a
-                  href="../assets/img/gallery/gallery-4.jpg"
+                  href="../assets/img/gallery/portecle.jpg"
                   class="gallery-lightbox"
                 >
                   <img
-                    src="../assets/img/gallery/gallery-4.jpg"
+                    src="../assets/img/gallery/portecle.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -327,11 +330,11 @@
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item" data-aos="zoom-in" data-aos-duration="2500">
                 <a
-                  href="../assets/img/gallery/gallery-5.jpg"
+                  href="../assets/img/gallery/invita.jpg"
                   class="gallery-lightbox"
                 >
                   <img
-                    src="../assets/img/gallery/gallery-5.jpg"
+                    src="../assets/img/gallery/invita.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -342,11 +345,11 @@
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item" data-aos="zoom-in" data-aos-duration="2500">
                 <a
-                  href="../assets/img/gallery/gallery-6.jpg"
+                  href="../assets/img/gallery/images.png"
                   class="gallery-lightbox"
                 >
                   <img
-                    src="../assets/img/gallery/gallery-6.jpg"
+                    src="../assets/img/gallery/images.png"
                     alt=""
                     class="img-fluid"
                   />
@@ -357,11 +360,11 @@
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item" data-aos="zoom-in" data-aos-duration="2500">
                 <a
-                  href="../assets/img/gallery/gallery-7.jpg"
+                  href="../assets/img/gallery/calendr.jpg"
                   class="gallery-lightbox"
                 >
                   <img
-                    src="../assets/img/gallery/gallery-7.jpg"
+                    src="../assets/img/gallery/calendr.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -372,11 +375,11 @@
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item" data-aos="zoom-in" data-aos-duration="2500">
                 <a
-                  href="../assets/img/gallery/gallery-8.jpg"
+                  href="../assets/img/gallery/calen.jpg"
                   class="gallery-lightbox"
                 >
                   <img
-                    src="../assets/img/gallery/gallery-8.jpg"
+                    src="../assets/img/gallery/calen.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -411,7 +414,7 @@
                 <div class="swiper-slide">
                   <div class="testimonial-item">
                     <img
-                      src="../assets/img/gallery/gallery-8.jpg"
+                      src="../assets/img/team/team-1.jpg"
                       class="testimonial-img"
                       alt=""
                     />
@@ -419,10 +422,7 @@
                     <h4>Client 1</h4>
                     <p>
                       <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                      Proin iaculis purus consequat sem cure digni ssim donec
-                      porttitora entum suscipit rhoncus. Accusantium quam,
-                      ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                      risus at semper.
+                      E-print est une meilleure plateforme disposant des centres d'impression de qualité qui delivrent des services très satisfaisant .
                       <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                     </p>
                   </div>
@@ -432,7 +432,7 @@
                 <div class="swiper-slide">
                   <div class="testimonial-item">
                     <img
-                      src="../assets/img/gallery/gallery-8.jpg"
+                      src="../assets/img/team/team-2.jpg"
                       class="testimonial-img"
                       alt=""
                     />
@@ -440,10 +440,7 @@
                     <h4>Client 2</h4>
                     <p>
                       <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                      Export tempor illum tamen malis malis eram quae irure esse
-                      labore quem cillum quid cillum eram malis quorum velit
-                      fore eram velit sunt aliqua noster fugiat irure amet legam
-                      anim culpa.
+                      Avec E-print, vos commandes sont vite traitée et vous pouvez l'utilisé à temps.
                       <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                     </p>
                   </div>
@@ -453,7 +450,7 @@
                 <div class="swiper-slide">
                   <div class="testimonial-item">
                     <img
-                      src="../assets/img/gallery/gallery-8.jpg"
+                      src="../assets/img/team/team-3.jpg"
                       class="testimonial-img"
                       alt=""
                     />
@@ -461,9 +458,7 @@
                     <h4>Client 3</h4>
                     <p>
                       <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                      Enim nisi quem export duis labore cillum quae magna enim
-                      sint quorum nulla quem veniam duis minim tempor labore
-                      quem eram duis noster aute amet eram fore quis sint minim.
+                      Opter pour E-print, c'est évité des déplacements unitiles pour faire ses impressions.
                       <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                     </p>
                   </div>
@@ -661,7 +656,7 @@
               </div>
 
               <div class="text-center mt-5 div-Avis" >
-                <button type="submit" class="btn btn-info sendAvis">Envoyer votre avis</button>
+                <button type="submit" class="btn-get-started">Envoyer votre avis</button>
               </div>
             </form>
 
@@ -677,9 +672,29 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "ContainerView",
+
+  data () {
+        return {
+            client:'',
+            centreImpression:''
+        };
+         
+    },
+
+
+  created(){    
+      axios.get('http://127.0.0.1:8000/api/index')
+                .then(res => {
+                    console.log("Response", res)
+                    this.client=res.data.nbr_client
+                    this.centreImpression= res.data.nbr_centre
+                }).catch(err => console.log(err))
+  }
 };
+
 </script>
 
 <style scoped lang="scss">
@@ -2062,6 +2077,19 @@ h6 {
   background: #5969f3;
 }
 
+#contact .btn-get-started {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff;
+  background: #1acc8d;
+  border: none;
+}
 
 .sendAvis{
   border-radius: 20px;

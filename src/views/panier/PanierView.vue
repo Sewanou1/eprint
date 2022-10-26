@@ -35,9 +35,9 @@
                     </PopupView>
 
                     <PopupComView v-if="popupTriggerss.buttonTrigger" 
-                                :TogglePopups="()=>TogglePopups('buttonTrigger')">
+                                :TogglePopups="()=>TogglePopups('buttonTrigger')" :the_order="this.order">
                         <div class="popup-body">
-                            <h2 class="en-tete mb-4">Sauvegarde de la commande :</h2>
+                            <h2 class="en-tete mb-4">Sauvegarde de la commande:</h2>
                                 <p class="paragraphe">
                                    <span>{{ this.commandez }}</span>
                                 </p>
@@ -229,11 +229,7 @@ import FooterView from "@/components/FooterView.vue";
 import PopupView from "@/components/PopupView.vue";
 import PopupComView from "@/components/PopupComView.vue";
 import { ref } from 'vue';
-import {
-  openKkiapayWidget,
-//   addKkiapayListener,
-  removeKkiapayListener,
-} from "kkiapay";
+
 export default {
     name: "PanierView",
 
@@ -290,7 +286,8 @@ export default {
             },
             file:null,
             valeur_devi:'',
-            commandez:''
+            commandez:'',
+            order:''
 
 
         };
@@ -320,7 +317,6 @@ export default {
                     console.log("Response", res)
                     this.commande.montant=res.data.devis
                     this.valeur_devi= res.data.devis
-                    // alert(res.data.devis)
                 }).catch(err => console.log(err))
            
         },
@@ -329,18 +325,6 @@ export default {
             return 
         },
         
-        open() {
-        openKkiapayWidget({
-            amount: 4000,
-            api_key: "6aa5a030a84211ecb9755de712bc9e4f",
-            sandbox: true,
-            phone: "97000000",
-        });
-        },
-
-        successHandler(response) {
-            console.log(response);
-        },
 
         OrderNow() {
             axios.post('http://127.0.0.1:8000/api/commander', this.commande)
@@ -349,6 +333,7 @@ export default {
                     this.$store.state.cart = {};
                     this.commande = {};
                     this.commandez="Succès !!!"
+                    this.order = res.data.order
                 }).catch(err => {
                     console.log(err)
                     if(this.$store.state.cart.length==0){
@@ -367,9 +352,6 @@ export default {
         // addKkiapayListener('success',this.successHandler);
     },
 
-    beforeUnmount() {
-      removeKkiapayListener('success',this.successHandler)
-    },
 };
 
 </script>
